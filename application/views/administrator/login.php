@@ -13,7 +13,7 @@
                     <div class="col-lg-6">
                         <div class="mt-5 p-4 mr-5">
                             <div class="text-center">
-                                <h6 class="h4 text-gray-900 mb-2">Selamat Datang Goblok!</h6>
+                                <h6 class="h4 text-gray-900 mb-2">Selamat Datang!</h6>
                                 <p class="mb-3 tiga">Silakan masukkan Username dan Password anda!</p>
                             </div>
 
