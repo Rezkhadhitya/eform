@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php $user = $this->session->userdata('login'); ?>
 <head>
 
     <meta charset="utf-8">

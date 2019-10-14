@@ -46,7 +46,7 @@ class Login extends LoginController
       $this->form_validation->set_rules('password', 'Password', 'trim|required');
 
       $this->form_validation->set_message('required', '{field} wajib diisi!');
-
+      $this->form_validation->set_error_delimiters('', '');
       if ($this->form_validation->run() == FALSE) {
           $res = array("error" => true, "message" => validation_errors());
       } else {
@@ -69,7 +69,7 @@ class Login extends LoginController
             $res = array("error" => true, "message" => "Username Atau Password Anda Salah");
           }
       }
-      exit();
+      // exit();
       echo json_encode($res);
   }
 

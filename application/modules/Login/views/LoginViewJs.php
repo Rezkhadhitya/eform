@@ -1,17 +1,7 @@
 <script>
 $(document).ready(function(){
 
-    window.swal({
-                title: "Proses...",
-                text: "Mohon Tunggu",
-                imageUrl: 'https://unsplash.it/400/200',
-                imageWidth: 400,
-                imageHeight: 200,
-                buttons: false,
-                allowOutsideClick: false,
-                imageAlt: 'Loading Imge',
-                animation: false
-            });
+   
 
     $('#btnLogin').click(function(){
         $.ajax({
@@ -22,13 +12,24 @@ $(document).ready(function(){
         type : 'post',
         dataType : 'json',
         success : function(obj){
+            window.swal({
+                text: "Mohon Tunggu",
+                buttons: false,
+                closeOnEsc: false,
+                allowOutsideClick: false,
+                imageAlt: 'Loading Imge',
+                animation: false
+            });
+            
             if(obj.error==false) {
                     window.swal("Informasi!", obj.message, "success").then((value) => {
                     location.href=(obj.url);
                         });
                 }
                 else {
-                    window.swal('Error', obj.message, 'error');
+                    window.swal('Error', obj.message, 'error', {
+                        className: "red-bg",
+                    });
                 }
             }
         });

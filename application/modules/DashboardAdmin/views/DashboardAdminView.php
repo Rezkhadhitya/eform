@@ -1,3 +1,4 @@
+<?php $user = $this->session->userdata('login'); ?>
 <body id="page-top">
     <!-- Begin Page Content -->
     <div class="container-fluid">
