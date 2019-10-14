@@ -1,4 +1,6 @@
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
     <div class="container">
 
         <div class="card o-hidden border-0 shadow-lg my-5">
@@ -16,10 +18,8 @@
                                 <h6 class="h4 text-gray-900 mb-2">Selamat Datang!</h6>
                                 <p class="mb-3 tiga">Silakan masukkan Username dan Password anda!</p>
                             </div>
-
-                            <?= $this->session->flashdata('pesan'); ?>
-
-                            <form method="post" action="<?= base_url('administrator/auth/proses_login') ?>" class="user">
+                            
+                            <form method="post" id="frmLogin" class="user">
                                 <div class="form-group">
                                     <input type="text" class="form-control placeholder_color form-control-user" id="username" name="username" aria-describedby="emailHelp" placeholder="Masukkan Username anda" value="<?= set_value('username'); ?>">
                                     <?= form_error('username', '<small class="text-danger ml-3">', '</small>'); ?>
@@ -30,7 +30,7 @@
                                     <?= form_error('password', '<small class="text-danger ml-3">', '</small>'); ?>
                                 </div>
 
-                                <button class="btn btn-primary btn-user btn-block">Login</button>
+                                <button type="button" class="btn btn-primary btn-user btn-block" id="btnLogin">Login</button>
                             </form>
 
                             <hr>
@@ -51,3 +51,7 @@
             </div>
         </div>
     </div>
+    
+<?php
+    $this->load->view($this->controller.'ViewJs');
+?>
