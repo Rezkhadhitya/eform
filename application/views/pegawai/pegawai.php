@@ -17,6 +17,9 @@
                     </div>
                     <!-- Card Body -->
                     <div class="card-body">
+
+                        <?= $this->session->flashdata('message'); ?>
+
                         <div class="table-responsive tiga">
                             <table class="table table-hover table-striped table-bordered table-sm" id="dataTable" width="160%" cellspacing="0">
                                 <thead class="tiga text-center table-dark">

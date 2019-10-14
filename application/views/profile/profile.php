@@ -31,9 +31,9 @@
                                         <br>
 
                                         <div class="form-group row text-left">
-                                            <a class="col-sm-12 col-form-label"><i class="fas fa-user fa-fw "></i> M. Rezka Aditya</a>
+                                            <a class="col-sm-12 col-form-label"><i class="fas fa-user fa-fw "></i> <?= $user['nama_lengkap']; ?></a>
 
-                                            <a class="col-sm-12 col-form-label"><i class="fas fa-envelope fa-fw"></i> darkroomeffect@gmail.com</a>
+                                            <a class="col-sm-12 col-form-label"><i class="fas fa-envelope fa-fw"></i> <?= $user['email']; ?></a>
 
                                             <a class="col-sm-12 col-form-label"><i class="fas fa-phone fa-fw"></i> +62 821 7719 4495</a>
 

@@ -22,7 +22,8 @@
                             <div class="form-group row">
                                 <label for="nip" class="col-sm-2 col-form-label">NIP</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control placeholder_color tiga" id="nip" placeholder="NIP" name="nip">
+                                    <input type="text" class="form-control placeholder_color tiga" id="nip" placeholder="NIP" name="nip" value="<?= set_value('nip'); ?>">
+                                    <input type="text" class="form-control placeholder_color tiga" id="password" placeholder="NIP" name="password" value="123">
                                     <?= form_error('nip', '<small class="text-danger">', '</small>'); ?>
                                 </div>
                             </div>
@@ -30,7 +31,7 @@
                             <div class="form-group row">
                                 <label for="no_ktp" class="col-sm-2 col-form-label">No. KTP</label>
                                 <div class="col-sm-10">
-                                    <input type="email" class="form-control placeholder_color tiga" id="no_ktp" placeholder="No. KTP" name="no_ktp">
+                                    <input type="text" class="form-control placeholder_color tiga" id="no_ktp" placeholder="No. KTP" name="no_ktp" value="<?= set_value('no_ktp'); ?>">
                                     <?= form_error('no_ktp', '<small class="text-danger">', '</small>'); ?>
                                 </div>
                             </div>
@@ -38,7 +39,7 @@
                             <div class="form-group row">
                                 <label for="nama_lengkap" class="col-sm-2 col-form-label">Nama Lengkap</label>
                                 <div class="col-sm-10">
-                                    <input type="email" class="form-control placeholder_color tiga" id="nama_lengkap" placeholder="Nama Lengkap" name="nama_lengkap">
+                                    <input type="text" class="form-control placeholder_color tiga" id="nama_lengkap" placeholder="Nama Lengkap" name="nama_lengkap" value="<?= set_value('nama_lengkap'); ?>">
                                     <?= form_error('nama_lengkap', '<small class="text-danger">', '</small>'); ?>
                                 </div>
                             </div>
@@ -46,7 +47,7 @@
                             <div class="form-group row">
                                 <label for="tempat_lahir" class="col-sm-2 col-form-label">Tempat Lahir</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control placeholder_color tiga " id="tempat_lahir" placeholder="Tempat Lahir" name="tempat_lahir">
+                                    <input type="text" class="form-control placeholder_color tiga " id="tempat_lahir" placeholder="Tempat Lahir" name="tempat_lahir" value="<?= set_value('tempat_lahir'); ?>">
                                     <?= form_error('tempat_lahir', '<small class="text-danger">', '</small>'); ?>
                                 </div>
                             </div>
@@ -68,8 +69,8 @@
                                     <span class="field">
                                         <select name="jenis_kelamin" class="form-control placeholder_color tiga" id="jenis_kelamin" name="jenis_kelamin">
                                             <option value="">- Pilih -</option>
-                                            <option value="Menikah">Laki - laki</option>
-                                            <option value="Belum Menikah">Perempuan</option>
+                                            <option value="Laki - laki">Laki - laki</option>
+                                            <option value="Perempuan">Perempuan</option>
                                         </select>
                                     </span>
                                     <?= form_error('jenis_kelamin', '<small class="text-danger">', '</small>'); ?>
@@ -113,13 +114,13 @@
                                     <span class="field">
                                         <select name="agama" id="agama" class="form-control placeholder_color tiga">
                                             <option value="">- Pilih -</option>
-                                            <option value="1">Islam</option>
-                                            <option value="2">Kristen Protestan</option>
-                                            <option value="3">Katolik</option>
-                                            <option value="4">Hindu</option>
-                                            <option value="10">Buddha</option>
-                                            <option value="6">Kong Hu Cu</option>
-                                            <option value="7">Lainnya</option>
+                                            <option value="Islam">Islam</option>
+                                            <option value="Kristen Protestan">Kristen Protestan</option>
+                                            <option value="Katholik">Katolik</option>
+                                            <option value="Hindu">Hindu</option>
+                                            <option value="Buddha">Buddha</option>
+                                            <option value="Kong Hu Cu">Kong Hu Cu</option>
+                                            <option value="Lainnya">Lainnya</option>
                                         </select>
                                     </span>
                                     <?= form_error('agama', '<small class="text-danger">', '</small>'); ?>
@@ -129,7 +130,7 @@
                             <div class="form-group row">
                                 <label for="alamat_tinggal" class="col-sm-2 col-form-label">Alamat Rumah</label>
                                 <div class="col-sm-10">
-                                    <textarea class="form-control placeholder_color tiga" rows="3" id="alamat" name="alamat" placeholder="Alamat Rumah"></textarea>
+                                    <textarea class="form-control placeholder_color tiga" rows="3" id="alamat" name="alamat" placeholder="Alamat Rumah" value="<?= set_value('alamat'); ?>"></textarea>
                                     <?= form_error('alamat', '<small class="text-danger">', '</small>'); ?>
                                 </div>
                             </div>
@@ -137,7 +138,7 @@
                             <div class="form-group row">
                                 <label for="no_telepon" class="col-sm-2 col-form-label">No. Telepon</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control placeholder_color tiga" id="no_telepon" name="no_telepon" placeholder="No. Telepon">
+                                    <input type="text" class="form-control placeholder_color tiga" id="no_telepon" name="no_telepon" placeholder="No. Telepon" value="<?= set_value('no_telepon'); ?>">
                                     <?= form_error('no_telepon', '<small class="text-danger">', '</small>'); ?>
                                 </div>
                             </div>
@@ -145,7 +146,7 @@
                             <div class="form-group row">
                                 <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control placeholder_color tiga" id="email" name="email" placeholder="Alamat Email">
+                                    <input type="text" class="form-control placeholder_color tiga" id="email" name="email" placeholder="Alamat Email" value="<?= set_value('email'); ?>">
                                     <?= form_error('email', '<small class="text-danger">', '</small>'); ?>
                                 </div>
                             </div>
@@ -153,7 +154,7 @@
                             <div class="form-group row">
                                 <label for="inputEmail3" class="col-sm-2 col-form-label">Jabatan</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control placeholder_color tiga" id="jabatan" name="jabatan" placeholder="Jabatan">
+                                    <input type="text" class="form-control placeholder_color tiga" id="jabatan" name="jabatan" placeholder="Jabatan" value="<?= set_value('jabatan'); ?>">
                                     <?= form_error('jabatan', '<small class="text-danger">', '</small>'); ?>
                                 </div>
                             </div>
@@ -161,7 +162,7 @@
                             <div class="form-group row">
                                 <label for="inputEmail3" class="col-sm-2 col-form-label">Penempatan</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control placeholder_color tiga" id="penempatan" name="penempatan" placeholder="Lokasi Penempatan">
+                                    <input type="text" class="form-control placeholder_color tiga" id="penempatan" name="penempatan" placeholder="Lokasi Penempatan" value="<?= set_value('penempatan'); ?>">
                                     <?= form_error('penempatan', '<small class="text-danger">', '</small>'); ?>
                                 </div>
                             </div>
