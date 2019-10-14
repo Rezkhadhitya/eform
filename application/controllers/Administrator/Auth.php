@@ -17,7 +17,7 @@ class Auth extends CI_Controller
         $this->form_validation->set_rules('username', 'Username', 'trim|required');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
 
-        $this->form_validation->set_message('required',     '{field} wajib diisi!');
+        $this->form_validation->set_message('required', '{field} wajib diisi!');
 
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('templates_administrator/auth_header');
@@ -33,17 +33,10 @@ class Auth extends CI_Controller
             $cek = $this->login_model->cek_login($user, $pass);
 
             if ($cek->num_rows() > 0) {
-                // echo '<pre>';
-                // print_r($cek);
-                // echo '</pre>';
-                // exit();
                 $data_pengguna = $cek->row_array();
-                $arr_ses = array(
-                    'username' => $data_pengguna['username'],
-                    'email' => $data_pengguna['email'],
-                    'role' => $data_pengguna['id_role']
-                );
-                $this->session->set_userdata('login', $arr_ses);
+                unset($data_pengguna['password']);
+
+                $this->session->set_userdata('login', $data_pengguna);
 
                 redirect('administrator/dashboard');
             } else {

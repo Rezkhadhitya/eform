@@ -4,16 +4,25 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Pegawai extends CI_Controller
 {
+
+    function __construct()
+    {
+        parent::__construct();
+        $this->load->model('User_model', 'um');
+    }
+
     public function index()
     {
         $data['title'] = 'Master Pegawai';
-        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['user'] = $this->session->userdata('login');
 
         $this->load->model('pegawai_model');
         $data['row'] = $this->pegawai_model->get();
 
+        $res = $this->um->get_role($this->session->userdata('role'));
+
         $this->load->view('templates_administrator/header', $data);
-        $this->load->view('templates_administrator/sidebar');
+        $this->load->view('templates_administrator/sidebar', $res);
         $this->load->view('pegawai/pegawai', $data);
         $this->load->view('templates_administrator/footer');
     }
@@ -21,7 +30,9 @@ class Pegawai extends CI_Controller
     public function tambah_pegawai()
     {
         $data['title'] = 'Tambah Pegawai';
-        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['user'] = $this->session->userdata('login');
+
+        $res = $this->um->get_role($this->session->userdata('role'));
 
         $this->form_validation->set_rules('nip', 'Username', 'trim|required');
         $this->form_validation->set_rules('no_ktp', 'No. KTP', 'trim|required');
@@ -43,7 +54,7 @@ class Pegawai extends CI_Controller
 
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('templates_administrator/header', $data);
-            $this->load->view('templates_administrator/sidebar');
+            $this->load->view('templates_administrator/sidebar', $res);
             $this->load->view('pegawai/tambah_pegawai', $data);
             $this->load->view('templates_administrator/footer');
         } else { }

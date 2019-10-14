@@ -4,16 +4,25 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Barang extends CI_Controller
 {
+
+    function __construct()
+    {
+        parent::__construct();
+        $this->load->model('User_model', 'um');
+    }
+
     public function index()
     {
         $data['title'] = 'Master Barang';
-        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['user'] = $this->session->userdata('login');
 
         $this->load->model('barang_model');
         $data['row'] = $this->barang_model->get();
 
+        $res = $this->um->get_role($this->session->userdata('role'));
+
         $this->load->view('templates_administrator/header', $data);
-        $this->load->view('templates_administrator/sidebar');
+        $this->load->view('templates_administrator/sidebar', $res);
         $this->load->view('barang/barang', $data);
         $this->load->view('templates_administrator/footer');
     }
@@ -21,7 +30,9 @@ class Barang extends CI_Controller
     public function tambah_barang()
     {
         $data['title'] = 'Tambah Barang';
-        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['user'] = $this->session->userdata('login');
+
+        $res = $this->um->get_role($this->session->userdata('role'));
 
         $this->form_validation->set_rules('kode_barang', 'Kode Barang', 'trim|required');
         $this->form_validation->set_rules('nama_barang', 'Nama Barang', 'trim|required');
@@ -36,7 +47,7 @@ class Barang extends CI_Controller
 
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('templates_administrator/header', $data);
-            $this->load->view('templates_administrator/sidebar');
+            $this->load->view('templates_administrator/sidebar', $res);
             $this->load->view('barang/tambah_barang', $data);
             $this->load->view('templates_administrator/footer');
         } else { }

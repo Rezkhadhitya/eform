@@ -1,8 +1,9 @@
 <?php
 
+defined('BASEPATH') or exit('No direct script access allowed');
+
 class User_model extends CI_Model
 {
-
     public function get($id = null)
     {
         $this->db->select('u.*, r.role as role')->from('user u');
@@ -17,7 +18,6 @@ class User_model extends CI_Model
 
     function get_role($id_role)
     {
-
         $this->db->select('m.*')->from('mst_akses ma');
         $this->db->join('mst_module m', 'm.id=ma.id_module');
         $this->db->where('ma.id_mst_role', $id_role);

@@ -18,15 +18,15 @@
         foreach ($arr_menu as $row) { ?>
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url($row['module']) ?>">
-                    <i class="<?php echo $row['icon']; ?>"></i>
-                    <span><?php echo $row['nama']; ?></span></a>
+                    <i class="<?= $row['icon']; ?>"></i>
+                    <span><?= $row['nama']; ?></span></a>
             </li>
         <?php }
         ?>
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('administrator/dashboard') ?>">
+            <a class="nav-link" href="<?= site_url('administrator/dashboard') ?>">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
@@ -139,8 +139,8 @@
 
             <div id="collapseProfile" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="<?= base_url('administrator/profile'); ?>"><i class="fas fa-fw fa-caret-right"></i> Profile Saya</a>
-                    <a class="collapse-item" href="register.html"><i class="fas fa-fw fa-caret-right"></i> Edit Profile</a>
+                    <a class="collapse-item" href="<?= site_url('administrator/profile'); ?>"><i class="fas fa-fw fa-caret-right"></i> Profile Saya</a>
+                    <a class="collapse-item" href="<?= site_url('administrator/profile/edit_profile'); ?>"><i class="fas fa-fw fa-caret-right"></i> Edit Profile</a>
                     <a class="collapse-item" href="forgot-password.html"><i class="fas fa-fw fa-caret-right"></i> Ubah Password</a>
                 </div>
             </div>

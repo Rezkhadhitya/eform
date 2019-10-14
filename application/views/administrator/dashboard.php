@@ -20,7 +20,7 @@
                             <p class="mb-0 tiga">Aplikasi e-Form (Electronic Formulir) PT. Tigapilar Maju Mandiri.</p>
 
                             <hr>
-                            <p class="mb-0 tiga">Anda login sebagai <strong><?= $user['level'] == 1 ? "Admin" : "User" ?></strong>!</p>
+                            <p class="mb-0 tiga">Anda login sebagai <strong><?= $user['nama_role'] ?></strong>!</p>
                         </div>
 
                         <div class="row">
