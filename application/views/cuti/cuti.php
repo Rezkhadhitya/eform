@@ -43,10 +43,9 @@
                                             <td class="align-middle"><?= $data->jumlah_hari ?></td>
                                             <!-- <td><?= $data->status ?></td> -->
                                             <td class="text-center align-middle" width="160px">
-                                                <!-- <div class="alert alert-success tiga" role="alert">
-                                                    <strong>Disetujui</strong>
-                                                </div> -->
-                                                <button type="button" class="btn btn-warning btn-sm">Menunggu Konfirmasi</button>
+                                                <button type="button" class="btn btn-success btn-sm">Disetujui</button>
+                                                <button type="button" class="btn btn-danger btn-sm">Ditolak</button>
+                                                <button type="button" class="btn btn-warning btn-sm">Pending</button>
                                             </td>
                                         </tr>
                                     <?php

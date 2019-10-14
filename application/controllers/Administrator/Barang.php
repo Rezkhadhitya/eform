@@ -33,10 +33,10 @@ class Barang extends CI_Controller
 
         $res = $this->um->get_role($this->session->userdata('role'));
 
-        $this->form_validation->set_rules('kode_barang', 'Kode Barang', 'trim|required');
         $this->form_validation->set_rules('nama_barang', 'Nama Barang', 'trim|required');
         $this->form_validation->set_rules('merk', 'Merk', 'trim|required');
         $this->form_validation->set_rules('harga', 'Harga', 'trim|required');
+        $this->form_validation->set_rules('qty', 'Qty', 'trim|required');
         $this->form_validation->set_rules('kategori', 'Kategori', 'trim|required');
         $this->form_validation->set_rules('supplier', 'Supplier', 'trim|required');
         $this->form_validation->set_rules('keterangan', 'Keterangan', 'trim|required');

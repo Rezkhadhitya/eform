@@ -36,7 +36,7 @@
 
         <!-- Heading -->
         <div class="sidebar-heading">
-            MASTER
+            ADMINISTRATOR
         </div>
 
         <!-- Nav Item - Pages Collapse Menu -->
@@ -60,7 +60,7 @@
 
         <!-- Heading -->
         <div class="sidebar-heading">
-            FORMULIR
+            PEGAWAI
         </div>
 
         <!-- Nav Item - Pages Collapse Menu -->
@@ -87,7 +87,7 @@
 
             <div id="collapsePermintaan" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="login.html"><i class="fas fa-fw fa-caret-right"></i>Tabel Data</a>
+                    <a class="collapse-item" href="<?= site_url('administrator/barang'); ?>""><i class=" fas fa-fw fa-caret-right"></i>Tabel Data</a>
                     <a class="collapse-item" href="register.html"><i class="fas fa-fw fa-caret-right"></i>Input Data</a>
                 </div>
             </div>
@@ -107,7 +107,7 @@
             </div>
         </li>
 
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseInvoice" aria-expanded="true" aria-controls="collapseInvoice">
                 <i class="fas fa-fw fa-sticky-note"></i>
                 <span>Rekap Data</span>
@@ -120,7 +120,15 @@
                     <a class="collapse-item" href="<?= site_url('administrator/invoice/msb'); ?>"><i class="fas fa-fw fa-caret-right"></i> Data MSB</a>
                 </div>
             </div>
-        </li>
+        </li> -->
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            PIMPINAN
+        </div>
 
         <!-- Divider -->
         <hr class="sidebar-divider">

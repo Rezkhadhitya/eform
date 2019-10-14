@@ -25,7 +25,7 @@
                                 <div class="card mb-4">
                                     <div class="card-body text-center tiga">
                                         <div class="">
-                                            <img src="<?= base_url('assets/img/profile/') . $user['image']; ?>" class="img-thumbnail rounded-circle col-md-8">
+                                            <img src="<?= base_url('assets/img/profile/') . $user['image']; ?>" class="img-thumbnail rounded-circle col-md-7">
                                         </div>
 
                                         <br>
@@ -67,7 +67,6 @@
                             <div class="col-lg-4">
                                 <div class="card mb-3">
                                     <div class="card-body">
-
                                         <div class="form-group row text-center">
                                             <a for="nama_lengkap" class="col-sm-12 col-form-label"> <strong>Password</strong></a>
 

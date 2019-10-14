@@ -61,7 +61,7 @@
                                         </div>
 
                                         <div class="form-group row">
-                                            <label for="Email" class="col-sm-3 col-form-label">Email</label>
+                                            <label for="Email" class="col-sm-3 col-form-label">Alamat Email</label>
                                             <div class="col-sm-7">
                                                 <input type="text" class="form-control placeholder_color tiga" id="email" placeholder="Alamat Email" name="email" value="<?= set_value('email'); ?>">
                                                 <?= form_error('email', '<small class="text-danger">', '</small>'); ?>

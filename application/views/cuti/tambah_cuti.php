@@ -46,16 +46,18 @@
 
                             <div class="form-group row">
                                 <label for="periode_cuti" class="col-sm-2 col-form-label">Periode Awal Cuti</label>
-                                <div class="col-sm-2">
+                                <div class="col-sm-3">
                                     <div class=" controls input-append date form_date" data-date="" data-date-format="dd/m/yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" name="tanggal_lahir" id="tanggal_lahir">
                                         <input class="tanggal form-control placeholder_color tiga" size="20" type="text" placeholder="DD/MM/YYYY">
                                         <span class="add-on"><i class="icon-th"></i></span>
                                     </div>
                                     <?= form_error('merk', '<small class="text-danger">', '</small>'); ?>
                                 </div>
+                            </div>
 
-                                <label for="periode_cuti" class="col-sm-2 col-form-label text-right">Periode Akhir Cuti</label>
-                                <div class="col-sm-2">
+                            <div class="form-group row">
+                                <label for="periode_cuti" class="col-sm-2 col-form-label">Periode Akhir Cuti</label>
+                                <div class="col-sm-3">
                                     <div class=" controls input-append date form_date" data-date="" data-date-format="dd/m/yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" name="tanggal_lahir" id="tanggal_lahir">
                                         <input class="tanggal form-control placeholder_color tiga" size="20" type="text" placeholder="DD/MM/YYYY">
                                         <span class="add-on"><i class="icon-th"></i></span>

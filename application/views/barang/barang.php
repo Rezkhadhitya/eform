@@ -12,7 +12,7 @@
                             <h5 class="m-0 font-weight-bold text-secondary text-right"><i class="fas fa-file"></i> Master Barang</h5>
                         </div>
                         <div class="text-right">
-                            <a href="<?= base_url('administrator/barang/tambah_barang'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm"><i class="fas fa-file fa-sm text-white"></i> Tambah Data</a>
+                            <a href="<?= base_url('administrator/barang/tambah_barang'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm"><i class="fas fa-plus fa-sm text-white"></i> Tambah Data</a>
                         </div>
                     </div>
                     <!-- Card Body -->
@@ -22,7 +22,7 @@
                                 <thead class="tiga text-center table-dark">
                                     <tr>
                                         <th scope="col">No.</th>
-                                        <th scope="col">Kode Barang</th>
+                                        <th scope="col">Kode Permintaan</th>
                                         <th scope="col">Nama Barang</th>
                                         <th scope="col">Harga</th>
                                         <th scope="col">Supplier</th>
@@ -55,7 +55,6 @@
                 </div>
             </div>
         </div>
-    </div>
 
     </div>
     <!-- End of Main Content -->
