@@ -34,12 +34,9 @@ class Auth extends CI_Controller
 
             if ($cek->num_rows() > 0) {
                 $data_pengguna = $cek->row_array();
-                $arr_ses = array(
-                    'username' => $data_pengguna['username'],
-                    'email' => $data_pengguna['email'],
-                    'role' => $data_pengguna['id_role']
-                );
-                $this->session->set_userdata('login', $arr_ses);
+                unset($data_pengguna['password']);
+
+                $this->session->set_userdata('login', $data_pengguna);
 
                 redirect('administrator/dashboard');
             } else {

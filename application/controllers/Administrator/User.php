@@ -13,7 +13,7 @@ class User extends CI_Controller
     public function index()
     {
         $data['title'] = 'Master User';
-        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['user'] = $this->session->userdata('login');
 
         $this->load->model('user_model');
         $data['row'] = $this->user_model->get();
@@ -29,7 +29,7 @@ class User extends CI_Controller
     public function tambah_user()
     {
         $data['title'] = 'Tambah User';
-        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['user'] = $this->session->userdata('login');
 
         $res = $this->um->get_role($this->session->userdata('role'));
 

@@ -7,7 +7,7 @@ class Invoice extends CI_Controller
     public function index()
     {
         $data['title'] = 'Data Rekap Barcoding';
-        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['user'] = $this->session->userdata('login');
 
         $res = $this->um->get_role($this->session->userdata('role'));
 
@@ -23,7 +23,7 @@ class Invoice extends CI_Controller
     public function mybiro()
     {
         $data['title'] = 'Data Rekap Mybiro';
-        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['user'] = $this->session->userdata('login');
 
         $res = $this->um->get_role($this->session->userdata('role'));
 
@@ -39,7 +39,7 @@ class Invoice extends CI_Controller
     public function msb()
     {
         $data['title'] = 'Data Rekap Mybiro';
-        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['user'] = $this->session->userdata('login');
 
         $res = $this->um->get_role($this->session->userdata('role'));
 

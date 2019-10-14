@@ -14,7 +14,7 @@ class Barang extends CI_Controller
     public function index()
     {
         $data['title'] = 'Master Barang';
-        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['user'] = $this->session->userdata('login');
 
         $this->load->model('barang_model');
         $data['row'] = $this->barang_model->get();
@@ -30,7 +30,7 @@ class Barang extends CI_Controller
     public function tambah_barang()
     {
         $data['title'] = 'Tambah Barang';
-        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['user'] = $this->session->userdata('login');
 
         $res = $this->um->get_role($this->session->userdata('role'));
 

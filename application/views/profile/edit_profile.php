@@ -9,10 +9,10 @@
                     <!-- Card Header - Dropdown -->
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                         <div class="text-left">
-                            <h5 class="m-0 font-weight-bold text-secondary text-right"><i class="fas fa-user-circle"></i> Profile Saya</h5>
+                            <h5 class="m-0 font-weight-bold text-secondary text-right"><i class="fas fa-user-circle"></i> Perbaharui profile</h5>
                         </div>
                         <div class="text-right">
-                            <a href="<?= base_url('administrator/pegawai/tambah_pegawai'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm"><i class="fas fa-user-edit fa-sm text-white"></i> Edit Profile</a>
+                            <a href="<?= base_url('administrator/profile'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm"><i class="fas fa-undo-alt fa-sm text-white"></i> Kembali</a>
                         </div>
                     </div>
 
@@ -25,21 +25,21 @@
                         <div class="row">
                             <div class="col-lg-3">
                                 <!-- Circle Buttons -->
-                                <div class="card shadow mb-4">
+                                <div class="card mb-4 rounded-0">
                                     <div class="card-body tiga">
                                         <div class="">
-                                            <img src="<?= base_url('assets/img/profile/') . $user['image']; ?>" class="img-thumbnail">
+                                            <img src="<?= base_url('assets/img/profile/') . $user['image']; ?>" class="img-thumbnail rounded-circle">
                                         </div>
 
                                         <br>
 
-                                        <a href="<?= base_url('administrator/pegawai/tambah_pegawai'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary btn-block shadow-sm"><i class="fas fa-user-edit fa-sm text-white"></i> Edit Profile</a>
+                                        <a href="<?= base_url('administrator/pegawai/tambah_pegawai'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary btn-block shadow-sm"><i class="fas fa-camera fa-sm text-white"></i> Ganti Foto Profile</a>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-lg-9">
-                                <div class="card shadow mb-4">
+                            <div class="border-success col-lg-9">
+                                <div class="card mb-4">
                                     <div class="card-body tiga">
 
                                         <div class="form-group row">
@@ -79,6 +79,13 @@
                                             <div class="col-sm-7">
                                                 <input type="text" class="form-control placeholder_color tiga" id="email" placeholder="Alamat Email" name="email" value="<?= set_value('email'); ?>">
                                                 <?= form_error('email', '<small class="text-danger">', '</small>'); ?>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="User" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-5">
+                                                <button type="submit" class="btn btn-info btn-sm tiga"><i class="fas fa-paper-plane fa-sm text-white"></i> Simpan Data</button>
                                             </div>
                                         </div>
 

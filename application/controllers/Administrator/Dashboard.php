@@ -13,14 +13,16 @@ class Dashboard extends CI_Controller
     function index()
     {
         $data['title'] = 'Dashboard';
-        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
-
-        // $id_role =  $this->session->userdata('role');
-
-        // $res = $this->um->get_role($id_role);
+        // print_r($this->session->userdata());
+        $data['user'] = $this->session->userdata('login');
+        // $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        // echo $this->db->last_query();
+        $id_role =  $this->session->userdata('role');
+        // print_r($data);
+        $res = $this->um->get_role($id_role);
 
         $this->load->view('templates_administrator/header', $data);
-        $this->load->view('templates_administrator/sidebar');
+        $this->load->view('templates_administrator/sidebar', $res);
         $this->load->view('administrator/dashboard', $data);
         $this->load->view('templates_administrator/footer');
     }
