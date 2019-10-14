@@ -12,7 +12,7 @@
                             <h5 class="m-0 font-weight-bold text-secondary text-right"><i class="fas fa-users   "></i> Data Cuti Pegawai</h5>
                         </div>
                         <div class="text-right">
-                            <a href="<?= base_url('administrator/barang/tambah_barang'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm"><i class="fas fa-file fa-sm text-white"></i> Tambah Data</a>
+                            <a href="<?= base_url('administrator/cuti/tambah_cuti'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm"><i class="fas fa-file fa-sm text-white"></i> Tambah Data</a>
                         </div>
                     </div>
                     <!-- Card Body -->
@@ -43,7 +43,10 @@
                                             <td class="align-middle"><?= $data->jumlah_hari ?></td>
                                             <!-- <td><?= $data->status ?></td> -->
                                             <td class="text-center align-middle" width="160px">
-                                                <button type="button" class="btn btn-success btn-sm text-gray">Disetujui</button>
+                                                <!-- <div class="alert alert-success tiga" role="alert">
+                                                    <strong>Disetujui</strong>
+                                                </div> -->
+                                                <button type="button" class="btn btn-warning btn-sm">Menunggu Konfirmasi</button>
                                             </td>
                                         </tr>
                                     <?php

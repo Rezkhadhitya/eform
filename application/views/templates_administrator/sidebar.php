@@ -47,9 +47,9 @@
             </a>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="<?= base_url('administrator/user'); ?>"><i class="fas fa-fw fa-caret-right"></i>Master User</a>
-                    <a class="collapse-item" href="<?= base_url('administrator/pegawai'); ?>"><i class="fas fa-fw fa-caret-right"></i>Master Pegawai</a>
-                    <a class="collapse-item" href="<?= base_url('administrator/barang'); ?>"><i class="fas fa-fw fa-caret-right"></i>Master Barang</a>
+                    <a class="collapse-item" href="<?= site_url('administrator/user'); ?>"><i class="fas fa-fw fa-caret-right"></i>Master User</a>
+                    <a class="collapse-item" href="<?= site_url('administrator/pegawai'); ?>"><i class="fas fa-fw fa-caret-right"></i>Master Pegawai</a>
+                    <a class="collapse-item" href="<?= site_url('administrator/barang'); ?>"><i class="fas fa-fw fa-caret-right"></i>Master Barang</a>
                     <a class="collapse-item" href="#"><i class="fas fa-fw fa-caret-right"></i>Konf. Perusahaan</a>
                 </div>
             </div>
@@ -72,7 +72,7 @@
 
             <div id="collapseCuti" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="<?= base_url('administrator/cuti'); ?>"><i class="fas fa-fw fa-caret-right"></i>Tabel Data</a>
+                    <a class="collapse-item" href="<?= site_url('administrator/cuti'); ?>"><i class="fas fa-fw fa-caret-right"></i>Tabel Data</a>
                     <a class="collapse-item" href="register.html"><i class="fas fa-fw fa-caret-right"></i>Input Data</a>
 
                 </div>
@@ -115,9 +115,9 @@
 
             <div id="collapseInvoice" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="<?= base_url('administrator/invoice'); ?>"><i class="fas fa-fw fa-caret-right"></i> Data Barcoding</a>
-                    <a class="collapse-item" href="<?= base_url('administrator/invoice/mybiro'); ?>"><i class="fas fa-fw fa-caret-right"></i> Data Mybiro</a>
-                    <a class="collapse-item" href="<?= base_url('administrator/invoice/msb'); ?>"><i class="fas fa-fw fa-caret-right"></i> Data MSB</a>
+                    <a class="collapse-item" href="<?= site_url('administrator/invoice'); ?>"><i class="fas fa-fw fa-caret-right"></i> Data Barcoding</a>
+                    <a class="collapse-item" href="<?= site_url('administrator/invoice/mybiro'); ?>"><i class="fas fa-fw fa-caret-right"></i> Data Mybiro</a>
+                    <a class="collapse-item" href="<?= site_url('administrator/invoice/msb'); ?>"><i class="fas fa-fw fa-caret-right"></i> Data MSB</a>
                 </div>
             </div>
         </li>
@@ -130,21 +130,13 @@
             PENGGUNA
         </div>
 
-        <!-- Nav Item - Pages Collapse Menu -->
+        <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProfile" aria-expanded="true" aria-controls="collapseProfile">
+            <a class="nav-link" href="<?= site_url('administrator/profile') ?>">
                 <i class="fas fa-fw fa-user"></i>
-                <span>Profile</span>
-            </a>
-
-            <div id="collapseProfile" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="<?= site_url('administrator/profile'); ?>"><i class="fas fa-fw fa-caret-right"></i> Profile Saya</a>
-                    <a class="collapse-item" href="<?= site_url('administrator/profile/edit_profile'); ?>"><i class="fas fa-fw fa-caret-right"></i> Edit Profile</a>
-                    <a class="collapse-item" href="forgot-password.html"><i class="fas fa-fw fa-caret-right"></i> Ubah Password</a>
-                </div>
-            </div>
+                <span>Profile</span></a>
         </li>
+
         <!-- Divider -->
         <hr class="sidebar-divider">
 

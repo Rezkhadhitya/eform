@@ -11,9 +11,6 @@
                         <div class="text-left">
                             <h5 class="m-0 font-weight-bold text-secondary text-right"><i class="fas fa-user-circle"></i> Profile Saya</h5>
                         </div>
-                        <div class="text-right">
-                            <a href="<?= site_url('administrator/profile/edit_profile'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm"><i class="fas fa-user-edit fa-sm text-white"></i> Edit Profile</a>
-                        </div>
                     </div>
 
                     <!-- Begin Page Content -->
@@ -23,64 +20,65 @@
                         <h1 class="h3 mb-4 text-gray-800"></h1>
 
                         <div class="row">
-                            <div class="col-lg-3">
+                            <div class="col-lg-4">
                                 <!-- Circle Buttons -->
                                 <div class="card mb-4">
-                                    <div class="card-body tiga">
+                                    <div class="card-body text-center tiga">
                                         <div class="">
-                                            <img src="<?= base_url('assets/img/profile/') . $user['image']; ?>" class="img-thumbnail rounded-circle">
+                                            <img src="<?= base_url('assets/img/profile/') . $user['image']; ?>" class="img-thumbnail rounded-circle col-md-8">
                                         </div>
 
                                         <br>
 
-                                        <a href="<?= base_url('administrator/pegawai/tambah_pegawai'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary btn-block shadow-sm"><i class="fas fa-user-edit fa-sm text-white"></i> Edit Profile</a>
+                                        <div class="form-group row text-left">
+                                            <a class="col-sm-12 col-form-label"><i class="fas fa-user fa-fw "></i> M. Rezka Aditya</a>
+
+                                            <a class="col-sm-12 col-form-label"><i class="fas fa-envelope fa-fw"></i> darkroomeffect@gmail.com</a>
+
+                                            <a class="col-sm-12 col-form-label"><i class="fas fa-phone fa-fw"></i> +62 821 7719 4495</a>
+
+                                            <a class="col-sm-12 col-form-label"><i class="fas fa-map-marker-alt fa-fw"></i> Jagakarsa, Jakarta Selatan</a>
+
+                                            <a class="col-sm-12 col-form-label"><i class="fas fa-address-card fa-fw"></i> Bergabung sejak</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-lg-9">
-                                <div class="card mb-4">
-                                    <div class="card-body tiga">
+                            <div class="col-lg-4">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <div class="form-group row text-center">
+                                            <a for="nama_lengkap" class="col-sm-12 col-form-label"> <strong>Security Info</strong></a>
 
-                                        <div class="form-group row">
-                                            <label for="nama_lengkap" class="col-sm-3 col-form-label">Nama Lengkap</label>
-                                            <div class="col-sm-7">
-                                                <label for="nama_lengkap" class="col-sm-3 col-form-label">Nama Lengkap</label>
+                                            <div class="col-sm-12 text-center">
+                                                <i class="fas fa-user-edit fa-5x text-gray-300 rotate"></i>
                                             </div>
-                                        </div>
 
-                                        <div class="form-group row">
-                                            <label for="Username" class="col-sm-3 col-form-label">Username</label>
-                                            <div class="col-sm-7">
-                                                <input type="text" class="form-control placeholder_color tiga" id="username" placeholder="Username" name="username" value="<?= set_value('username'); ?>">
-                                                <?= form_error('username', '<small class="text-danger">', '</small>'); ?>
+                                            <label for="nama_lengkap" class="col-sm-12 col-form-label tiga">Keep your security methods and security info up to date.</label>
+
+                                            <a href="<?= site_url('administrator/profile/edit_profile'); ?>" for="nama_lengkap" class="col-sm-12 col-form-label"> <strong>Security Info<i class="fas fa-angle-right fa-fw"></i></strong></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-4">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+
+                                        <div class="form-group row text-center">
+                                            <a for="nama_lengkap" class="col-sm-12 col-form-label"> <strong>Password</strong></a>
+
+                                            <div class="col-sm-12 text-center">
+                                                <i class="fas fa-lock fa-5x text-gray-300 rotate"></i>
                                             </div>
-                                        </div>
 
-                                        <div class="form-group row">
-                                            <label for="Password" class="col-sm-3 col-form-label">Password</label>
-                                            <div class="col-sm-7">
-                                                <input type="password" class="form-control placeholder_color tiga" id="password" placeholder="Password" name="password" value="<?= set_value('password'); ?>">
-                                                <?= form_error('password', '<small class="text-danger">', '</small>'); ?>
-                                            </div>
-                                        </div>
+                                            <label for="nama_lengkap" class="col-sm-12 col-form-label tiga">Make your password stronger, or change it if someone knows it.</label>
 
-                                        <div class="form-group row">
-                                            <label for="konfirmasi_Password" class="col-sm-3 col-form-label">Konfirmasi Password</label>
-                                            <div class="col-sm-7">
-                                                <input type="password" class="form-control placeholder_color tiga" id="konfirmasi_password" placeholder="Konfirmasi Password" name="konfirmasi_password" value="<?= set_value('konfirmasi_password'); ?>">
-                                                <?= form_error('konfirmasi_password', '<small class="text-danger">', '</small>'); ?>
-                                            </div>
+                                            <a href="<?= site_url('administrator/profile/ubah_password'); ?>" for="nama_lengkap" class="col-sm-12 col-form-label"> <strong>Change Password<i class="fas fa-angle-right fa-fw"></i></strong></a>
                                         </div>
-
-                                        <div class="form-group row">
-                                            <label for="Email" class="col-sm-3 col-form-label">Alamat Email</label>
-                                            <div class="col-sm-7">
-                                                <input type="text" class="form-control placeholder_color tiga" id="email" placeholder="Alamat Email" name="email" value="<?= set_value('email'); ?>">
-                                                <?= form_error('email', '<small class="text-danger">', '</small>'); ?>
-                                            </div>
-                                        </div>
-
                                     </div>
                                 </div>
                             </div>

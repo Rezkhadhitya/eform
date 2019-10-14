@@ -9,10 +9,10 @@
                     <!-- Card Header - Dropdown -->
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                         <div class="text-left">
-                            <h5 class="m-0 font-weight-bold text-secondary text-right"><i class="fas fa-fw fa-file"></i> Tambah Barang</h5>
+                            <h5 class="m-0 font-weight-bold text-secondary text-right"><i class="fas fa-fw fa-user-cog"></i> Tambah Cuti</h5>
                         </div>
                         <div class="text-right">
-                            <a href="<?= base_url('administrator/barang'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm"><i class="fas fa-undo-alt fa-sm text-white"></i> Kembali</a>
+                            <a href="<?= base_url('administrator/cuti'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm"><i class="fas fa-undo-alt fa-sm text-white"></i> Kembali</a>
                         </div>
                     </div>
 
@@ -20,65 +20,68 @@
                     <div class="card-body">
                         <form class="tiga" action="" method="post">
                             <div class="form-group row">
-                                <label for="nip" class="col-sm-2 col-form-label">Kode Barang</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control placeholder_color tiga" id="kode_barang" placeholder="Kode Barang" name="kode_barang">
-                                    <?= form_error('kode_barang', '<small class="text-danger">', '</small>'); ?>
+                                <label for="jenis_kelamin" class="col-sm-2 col-form-label">Jenis Cuti</label>
+                                <div class="col-sm-6">
+                                    <span class="field">
+                                        <select name="jenis_kelamin" class="form-control placeholder_color tiga" id="jenis_kelamin" name="jenis_kelamin">
+                                            <option value="">- Pilih -</option>
+                                            <option value="Sakit">Sakit</option>
+                                            <option value="Berduka">Berduka Cita</option>
+                                            <option value="Ijin Pribadi">Ijin Pribadi</option>
+                                            <option value="Melahirkan">Hamil / Melahirkan</option>
+                                            <option value="Lainnya">Lainnya</option>
+                                        </select>
+                                    </span>
+                                    <?= form_error('jenis_kelamin', '<small class="text-danger">', '</small>'); ?>
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="no_ktp" class="col-sm-2 col-form-label">Nama Barang</label>
-                                <div class="col-sm-10">
-                                    <input type="email" class="form-control placeholder_color tiga" id="nama_barang" placeholder="Nama Barang" name="nama_barang">
-                                    <?= form_error('nama_barang', '<small class="text-danger">', '</small>'); ?>
+                                <label for="alamat_tinggal" class="col-sm-2 col-form-label">Alasan Cuti</label>
+                                <div class="col-sm-6">
+                                    <textarea class="form-control placeholder_color tiga" rows="3" id="alasan_cuti" name="alasan_cuti" placeholder="Alasan Cuti"></textarea>
+                                    <?= form_error('alamat', '<small class="text-danger">', '</small>'); ?>
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="tempat_lahir" class="col-sm-2 col-form-label">Merk</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control placeholder_color tiga " id="merk" placeholder="Merk" name="merk">
+                                <label for="periode_cuti" class="col-sm-2 col-form-label">Periode Awal Cuti</label>
+                                <div class="col-sm-2">
+                                    <div class=" controls input-append date form_date" data-date="" data-date-format="dd/m/yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" name="tanggal_lahir" id="tanggal_lahir">
+                                        <input class="tanggal form-control placeholder_color tiga" size="20" type="text" placeholder="DD/MM/YYYY">
+                                        <span class="add-on"><i class="icon-th"></i></span>
+                                    </div>
+                                    <?= form_error('merk', '<small class="text-danger">', '</small>'); ?>
+                                </div>
+
+                                <label for="periode_cuti" class="col-sm-2 col-form-label text-right">Periode Akhir Cuti</label>
+                                <div class="col-sm-2">
+                                    <div class=" controls input-append date form_date" data-date="" data-date-format="dd/m/yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" name="tanggal_lahir" id="tanggal_lahir">
+                                        <input class="tanggal form-control placeholder_color tiga" size="20" type="text" placeholder="DD/MM/YYYY">
+                                        <span class="add-on"><i class="icon-th"></i></span>
+                                    </div>
                                     <?= form_error('merk', '<small class="text-danger">', '</small>'); ?>
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="inputEmail3" class="col-sm-2 col-form-label">Harga</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control placeholder_color tiga" id="harga" name="harga" placeholder="Harga">
-                                    <?= form_error('harga', '<small class="text-danger">', '</small>'); ?>
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="inputEmail3" class="col-sm-2 col-form-label">Kategori</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control placeholder_color tiga" id="kategori" name="kategori" placeholder="Kategori">
-                                    <?= form_error('kategori', '<small class="text-danger">', '</small>'); ?>
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="inputEmail3" class="col-sm-2 col-form-label">Supplier</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control placeholder_color tiga" id="supplier" name="supplier" placeholder="Supplier">
-                                    <?= form_error('supplier', '<small class="text-danger">', '</small>'); ?>
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="alamat_tinggal" class="col-sm-2 col-form-label">Keterangan</label>
-                                <div class="col-sm-10">
-                                    <textarea class="form-control placeholder_color tiga" rows="3" id="keterangan" name="keterangan" placeholder="Keterangan"></textarea>
-                                    <?= form_error('keterangan', '<small class="text-danger">', '</small>'); ?>
+                                <label for="jenis_kelamin" class="col-sm-2 col-form-label">Atasan Langsung</label>
+                                <div class="col-sm-6">
+                                    <span class="field">
+                                        <select name="jenis_kelamin" class="form-control placeholder_color tiga" id="jenis_kelamin" name="jenis_kelamin">
+                                            <option value="">- Pilih -</option>
+                                            <option value="Menikah">Laki - laki</option>
+                                            <option value="Belum Menikah">Perempuan</option>
+                                        </select>
+                                    </span>
+                                    <?= form_error('jenis_kelamin', '<small class="text-danger">', '</small>'); ?>
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="inputEmail3" class="col-sm-2 col-form-label"></label>
                                 <div class="col-sm-10">
-                                    <button type="submit" class="btn btn-info tiga"><i class="fas fa-paper-plane fa-sm text-white"></i> Simpan Data</button>
+                                    <button type="submit" class="btn btn-primary btn-sm tiga"><i class="fas fa-paper-plane fa-sm text-white"></i> Simpan Data</button>
                                 </div>
                             </div>
 

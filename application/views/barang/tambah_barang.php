@@ -78,7 +78,7 @@
                             <div class="form-group row">
                                 <label for="inputEmail3" class="col-sm-2 col-form-label"></label>
                                 <div class="col-sm-10">
-                                    <button type="submit" class="btn btn-info tiga"><i class="fas fa-paper-plane fa-sm text-white"></i> Simpan Data</button>
+                                    <button type="submit" class="btn btn-primary btn-sm tiga"><i class="fas fa-paper-plane fa-sm text-white"></i> Simpan Data</button>
                                 </div>
                             </div>
 
