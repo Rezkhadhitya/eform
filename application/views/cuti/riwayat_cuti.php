@@ -9,13 +9,13 @@
                     <!-- Card Header - Dropdown -->
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                         <div class="text-left">
-                            <h5 class="m-0 font-weight-bold text-secondary text-right empat"><i class="fas fa-users"></i> Master Cuti</h5>
+                            <h5 class="m-0 font-weight-bold text-secondary text-right empat"><i class="fas fa-fw fa-history"></i> Riwayat Cuti</h5>
                         </div>
                         <div class="text-right">
-                            <a href="<?= site_url('administrator/cuti/tambah_cuti'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm"><i class="fas fa-user-plus fa-sm text-white"></i> Tambah Data</a>
-                            <a href="<?= site_url('administrator/cuti/riwayat_cuti'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm"><i class="fas fa-history fa-sm text-white"></i> Riwayat</a>
+                            <a href="<?= base_url('administrator/cuti'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm"><i class="fas fa-undo-alt fa-sm text-white"></i> Kembali</a>
                         </div>
                     </div>
+
                     <!-- Card Body -->
                     <div class="card-body">
                         <div class="table-responsive tiga">
@@ -24,11 +24,12 @@
                                     <tr>
                                         <th scope="col">No.</th>
                                         <th scope="col">No. Cuti</th>
-                                        <th scope="col">Alasan Cuti</th>
-                                        <th scope="col">Tanggal Awal</th>
-                                        <th scope="col">Tanggal Akhir</th>
+                                        <th scope="col">Jenis Cuti</th>
+                                        <th scope="col">Alasan</th>
+                                        <th scope="col">Tanggal Pelaksanaan</th>
                                         <th scope="col">Lama Cuti</th>
-                                        <th scope="col">Status</th>
+                                        <th scope="col">Status Approval</th>
+                                        <th scope="col">Laporan</th>
                                     </tr>
                                 </thead>
 
@@ -60,8 +61,8 @@
                 </div>
             </div>
         </div>
-
     </div>
+    <!-- /.container-fluid -->
 
     </div>
     <!-- End of Main Content -->

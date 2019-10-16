@@ -9,7 +9,7 @@
                     <!-- Card Header - Dropdown -->
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                         <div class="text-left">
-                            <h5 class="m-0 font-weight-bold text-secondary text-right"><i class="fas fa-fw fa-user-cog"></i> Tambah Cuti</h5>
+                            <h5 class="m-0 font-weight-bold text-secondary text-right empat"><i class="fas fa-fw fa-user-plus"></i> Tambah Cuti</h5>
                         </div>
                         <div class="text-right">
                             <a href="<?= base_url('administrator/cuti'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm"><i class="fas fa-undo-alt fa-sm text-white"></i> Kembali</a>

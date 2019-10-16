@@ -9,10 +9,10 @@
                     <!-- Card Header - Dropdown -->
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                         <div class="text-left">
-                            <h5 class="m-0 font-weight-bold text-secondary text-right empat"><i class="fas fa-fw fa-user-plus"></i> Tambah Pegawai</h5>
+                            <h5 class="m-0 font-weight-bold text-secondary text-right"><i class="fas fa-fw fa-user-edit"></i> <?= $user['nama_lengkap']; ?></h5>
                         </div>
                         <div class="text-right">
-                            <a href="<?= base_url('administrator/pegawai'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm"><i class="fas fa-undo-alt fa-sm text-white"></i> Kembali</a>
+                            <a href="<?= base_url('administrator/profile'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm"><i class="fas fa-undo-alt fa-sm text-white"></i> Kembali</a>
                         </div>
                     </div>
 
@@ -44,12 +44,16 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="tempat_lahir" class="col-sm-2 col-form-label">Tempat / Tanggal Lahir</label>
-                                <div class="col-sm-6">
+                                <label for="tempat_lahir" class="col-sm-2 col-form-label">Tempat Lahir</label>
+                                <div class="col-sm-10">
                                     <input type="text" class="form-control placeholder_color tiga " id="tempat_lahir" placeholder="Tempat Lahir" name="tempat_lahir" value="<?= set_value('tempat_lahir'); ?>">
                                     <?= form_error('tempat_lahir', '<small class="text-danger">', '</small>'); ?>
                                 </div>
-                                <div class="col-sm-4">
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="tanggal" class="col-sm-2 col-form-label">Tanggal Lahir</label>
+                                <div class="col-sm-10">
                                     <div class=" controls input-append date form_date" data-date="" data-date-format="dd/m/yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" name="tanggal_lahir" id="tanggal_lahir">
                                         <input class="tanggal form-control placeholder_color tiga" size="20" type="text" placeholder="DD/MM/YYYY">
                                         <span class="add-on"><i class="icon-th"></i></span>

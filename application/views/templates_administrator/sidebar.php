@@ -26,13 +26,13 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="<?= site_url('administrator/dashboard') ?>">
+            <a class="nav-link mb-n3" href="<?= site_url('administrator/dashboard') ?>">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
 
         <!-- Divider -->
-        <hr class="sidebar-divider">
+        <hr class="sidebar-divider mt-3">
 
         <!-- Heading -->
         <div class="sidebar-heading">
@@ -41,7 +41,7 @@
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            <a class="nav-link collapsed mb-n3" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fas fa-fw fa-cog"></i>
                 <span>Data Master</span>
             </a>
@@ -56,7 +56,7 @@
         </li>
 
         <!-- Divider -->
-        <hr class="sidebar-divider">
+        <hr class="sidebar-divider mt-3">
 
         <!-- Heading -->
         <div class="sidebar-heading">
@@ -65,7 +65,7 @@
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCuti" aria-expanded="true" aria-controls="collapseCuti">
+            <a class="nav-link collapsed mb-n3" href="#" data-toggle="collapse" data-target="#collapseCuti" aria-expanded="true" aria-controls="collapseCuti">
                 <i class="fas fa-fw fa-users"></i>
                 <span>Cuti Pegawai</span>
             </a>
@@ -80,7 +80,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePermintaan" aria-expanded="true" aria-controls="collapsePermintaan">
+            <a class="nav-link collapsed mb-n3" href="#" data-toggle="collapse" data-target="#collapsePermintaan" aria-expanded="true" aria-controls="collapsePermintaan">
                 <i class="fas fa-fw fa-sticky-note"></i>
                 <span>Permintaan Barang</span>
             </a>
@@ -94,7 +94,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePenerimaan" aria-expanded="true" aria-controls="collapsePenerimaan">
+            <a class="nav-link collapsed mb-n3" href="#" data-toggle="collapse" data-target="#collapsePenerimaan" aria-expanded="true" aria-controls="collapsePenerimaan">
                 <i class="fas fa-fw fa-sticky-note"></i>
                 <span>Penerimaan Barang</span>
             </a>
@@ -123,15 +123,45 @@
         </li> -->
 
         <!-- Divider -->
-        <hr class="sidebar-divider">
+        <hr class="sidebar-divider mt-3">
 
         <!-- Heading -->
         <div class="sidebar-heading">
             PIMPINAN
         </div>
 
+        <li class="nav-item">
+            <a class="nav-link mb-n3" href="<?= site_url('administrator/profile') ?>">
+                <i class="fas fa-fw fa-landmark"></i>
+                <span>Setup Departemen</span></a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link mb-n3" href="<?= site_url('administrator/profile') ?>">
+                <i class="fas fa-fw fa-users"></i>
+                <span>Data Pegawai</span></a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link mb-n3" href="<?= site_url('administrator/profile') ?>">
+                <i class="fas fa-fw fa-file"></i>
+                <span>Approval Cuti</span></a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link mb-n3" href="<?= site_url('administrator/profile') ?>">
+                <i class="fas fa-fw fa-file"></i>
+                <span>Approval Permintaan</span></a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link mb-n3" href="<?= site_url('administrator/profile') ?>">
+                <i class="fas fa-fw fa-print"></i>
+                <span>Laporan</span></a>
+        </li>
+
         <!-- Divider -->
-        <hr class="sidebar-divider">
+        <hr class="sidebar-divider mt-3">
 
         <!-- Heading -->
         <div class="sidebar-heading">
@@ -164,6 +194,7 @@
 
     </ul>
     <!-- End of Sidebar -->
+
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
 

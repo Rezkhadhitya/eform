@@ -9,7 +9,7 @@
                     <!-- Card Header - Dropdown -->
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                         <div class="text-left">
-                            <h5 class="m-0 font-weight-bold text-secondary text-right"><i class="fas fa-users"></i> Master User</h5>
+                            <h5 class="m-0 font-weight-bold text-secondary text-right empat"><i class="fas fa-users"></i> Master User</h5>
                         </div>
                         <div class="text-right">
                             <a href="<?= base_url('administrator/user/tambah_user'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm"><i class="fas fa-user-plus fa-sm text-white"></i> Tambah Data</a>
