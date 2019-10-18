@@ -43,7 +43,7 @@
                                             <td class="align-middle"><?= $data->jabatan ?></td>
                                             <td class="align-middle"><?= $data->penempatan ?></td>
                                             <td class="text-center align-middle" width="160px">
-                                                <button type="button" onclick="lihat_detail(<?= $data->nip; ?>)" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#ModalPegawai" title="Detail data"><i class="fas fa-folder-open fa-sm text-white"></i></button>
+                                                <button type="button" onclick="lihat_detail('<?= $data->nip; ?>')" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#ModalPegawai" title="Detail data"><i class="fas fa-folder-open fa-sm text-white"></i></button>
                                                 <button type="button" class="btn btn-warning btn-sm" title="Edit data"><i class="fas fa-edit fa-sm text-white"></i></button>
                                                 <button type="button" class="btn btn-danger btn-sm" title="Hapus data"><i class="fas fa-trash-alt fa-sm text-white"></i></button>
                                             </td>
