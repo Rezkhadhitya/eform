@@ -34,14 +34,15 @@
                                     <?php $no = 1;
                                     foreach ($row->result() as $key => $data) { ?>
                                         <tr>
-                                            <td><?= $no++ ?></td>
-                                            <td><?= $data->kode_barang ?></td>
-                                            <td><?= $data->barang ?></td>
-                                            <td class="text-right"><?= $data->harga ?></td>
-                                            <td><?= $data->supplier ?></td>
-                                            <td class="text-center" width="160px">
-                                                <a href="" class="btn btn-primary btn-sm dua"><i class="fas fa-edit"></i> Edit</a>
-                                                <a href="" class="btn btn-danger btn-sm dua"><i class="fas fa-trash-alt"></i> Delete</a>
+                                            <td class="align-middle"><?= $no++ ?></td>
+                                            <td class="align-middle"><?= $data->kode_barang ?></td>
+                                            <td class="align-middle"><?= $data->barang ?></td>
+                                            <td class="align-middle text-right"><?= $data->harga ?></td>
+                                            <td class="align-middle"><?= $data->supplier ?></td>
+                                            <td class="text-center align-middle" width="160px">
+                                                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModalLong" title="Detail data"><i class="fas fa-folder-open fa-sm text-white"></i></button>
+                                                <button type="button" class="btn btn-warning btn-sm" title="Edit data"><i class="fas fa-edit fa-sm text-white"></i></button>
+                                                <button type="button" class="btn btn-danger btn-sm" title="Hapus data"><i class="fas fa-trash-alt fa-sm text-white"></i></button>
                                             </td>
                                         </tr>
                                     <?php

@@ -39,7 +39,7 @@ class Pegawai extends CI_Controller
         $this->form_validation->set_rules('nama_lengkap', 'Nama Lengkap', 'trim|required');
         $this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'trim|required');
         $this->form_validation->set_rules('tempat_lahir', 'Tempat Lahir', 'trim|required');
-        // $this->form_validation->set_rules('tanggal_lahir', 'Tanggal Lahir', 'trim|required');
+        $this->form_validation->set_rules('tanggal_lahir', 'Tanggal Lahir', 'trim|required');
         $this->form_validation->set_rules('status_perkawinan', 'Status Perkawinan', 'trim|required');
         $this->form_validation->set_rules('jumlah_anak', 'Jumlah Anak', 'trim|required');
         $this->form_validation->set_rules('agama', 'Agama', 'trim|required');
@@ -65,6 +65,7 @@ class Pegawai extends CI_Controller
                 'nama_lengkap' => ($this->input->post('nama_lengkap', true)),
                 'jenis_kelamin' => ($this->input->post('jenis_kelamin', true)),
                 'tempat_lahir' => ($this->input->post('tempat_lahir', true)),
+                'tanggal_lahir' => ($this->input->post('tanggal_lahir', true)),
                 'status_perkawinan' => ($this->input->post('status_perkawinan', true)),
                 'jumlah_anak' => ($this->input->post('jumlah_anak', true)),
                 'agama' => ($this->input->post('agama', true)),
@@ -77,7 +78,7 @@ class Pegawai extends CI_Controller
             ];
             $data2 = [
                 'username' => htmlspecialchars($this->input->post('nip', true)),
-                'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
+                'password' => sha1($this->input->post('password'), true),
                 'nama_lengkap' => htmlspecialchars($this->input->post('nama_lengkap', true)),
                 'email' => htmlspecialchars($email),
                 'image' => 'default.jpg',
@@ -90,7 +91,7 @@ class Pegawai extends CI_Controller
             $this->db->insert('user', $data2);
 
             $this->session->set_flashdata('message', '<div class="tiga alert alert-success" role="alert">
-            Berhasil menambahkan data pegawai.</div>');
+            <strong>Berhasil!</strong> menambahkan data pegawai.</div>');
             redirect('administrator/pegawai');
         }
     }

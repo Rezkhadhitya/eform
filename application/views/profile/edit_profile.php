@@ -19,6 +19,9 @@
                     <!-- Begin Page Content -->
                     <div class="container-fluid">
 
+                        <!-- <form action=""> -->
+                        <?= form_open_multipart('profile/edit_profile'); ?>
+
                         <!-- Page Heading -->
                         <h1 class="h3 mb-4 text-gray-800"></h1>
 
@@ -55,7 +58,7 @@
                                         <div class="form-group row">
                                             <label for="Password" class="col-sm-3 col-form-label">Nama Lengkap</label>
                                             <div class="col-sm-7">
-                                                <input type="text" class="form-control placeholder_color tiga" id="nama_lengkap" placeholder="Nama Lengkap" name="nama_lengkap"  value="<?= $user['nama_lengkap']; ?>">
+                                                <input type="text" class="form-control placeholder_color tiga" id="nama_lengkap" placeholder="Nama Lengkap" name="nama_lengkap" value="<?= $user['nama_lengkap']; ?>">
                                                 <?= form_error('password', '<small class="text-danger">', '</small>'); ?>
                                             </div>
                                         </div>

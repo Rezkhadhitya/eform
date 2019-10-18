@@ -20,6 +20,20 @@
                     <div class="card-body">
                         <form class="tiga" action="" method="post">
                             <div class="form-group row">
+                                <label for="jenis_kelamin" class="col-sm-2 col-form-label">Departemen</label>
+                                <div class="col-sm-6">
+                                    <span class="field">
+                                        <select name="jenis_kelamin" class="form-control placeholder_color tiga" id="jenis_kelamin" name="jenis_kelamin">
+                                            <option value="">- Pilih -</option>
+                                            <option value="Menikah">Laki - laki</option>
+                                            <option value="Belum Menikah">Perempuan</option>
+                                        </select>
+                                    </span>
+                                    <?= form_error('jenis_kelamin', '<small class="text-danger">', '</small>'); ?>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
                                 <label for="jenis_kelamin" class="col-sm-2 col-form-label">Jenis Cuti</label>
                                 <div class="col-sm-6">
                                     <span class="field">
@@ -45,38 +59,41 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="periode_cuti" class="col-sm-2 col-form-label">Periode Awal Cuti</label>
-                                <div class="col-sm-3">
-                                    <div class=" controls input-append date form_date" data-date="" data-date-format="dd/m/yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" name="tanggal_lahir" id="tanggal_lahir">
-                                        <input class="tanggal form-control placeholder_color tiga" size="20" type="text" placeholder="DD/MM/YYYY">
-                                        <span class="add-on"><i class="icon-th"></i></span>
+                                <label for="periode_cuti" class="col-sm-2 col-form-label">Tanggal Pengajuan</label>
+                                <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                                <div class="input-group col-sm-3">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="fas fa-calendar-alt fa-sm text-gray"></i></div>
                                     </div>
-                                    <?= form_error('merk', '<small class="text-danger">', '</small>'); ?>
+                                    <input type="date" class="form-control tiga" id="inlineFormInputGroup" value="<?= date('Y-m-d') ?>" placeholder="Username">
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="periode_cuti" class="col-sm-2 col-form-label">Periode Akhir Cuti</label>
-                                <div class="col-sm-3">
-                                    <div class=" controls input-append date form_date" data-date="" data-date-format="dd/m/yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" name="tanggal_lahir" id="tanggal_lahir">
-                                        <input class="tanggal form-control placeholder_color tiga" size="20" type="text" placeholder="DD/MM/YYYY">
-                                        <span class="add-on"><i class="icon-th"></i></span>
+                                <label for="periode_cuti" class="col-sm-2 col-form-label">Awal Cuti</label>
+                                <div class="input-group col-sm-3">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="fas fa-calendar-alt fa-sm text-gray"></i></div>
                                     </div>
-                                    <?= form_error('merk', '<small class="text-danger">', '</small>'); ?>
+                                    <input type="date" class="form-control tiga" id="inlineFormInputGroup" value="<?= date('Y-m-d') ?>" placeholder="Username">
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="jenis_kelamin" class="col-sm-2 col-form-label">Atasan Langsung</label>
-                                <div class="col-sm-6">
-                                    <span class="field">
-                                        <select name="jenis_kelamin" class="form-control placeholder_color tiga" id="jenis_kelamin" name="jenis_kelamin">
-                                            <option value="">- Pilih -</option>
-                                            <option value="Menikah">Laki - laki</option>
-                                            <option value="Belum Menikah">Perempuan</option>
-                                        </select>
-                                    </span>
-                                    <?= form_error('jenis_kelamin', '<small class="text-danger">', '</small>'); ?>
+                                <label for="periode_cuti" class="col-sm-2 col-form-label">Akhir Cuti</label>
+                                <div class="input-group col-sm-3">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="fas fa-calendar-alt fa-sm text-gray"></i></div>
+                                    </div>
+                                    <input type="date" class="form-control tiga" id="inlineFormInputGroup" value="<?= date('Y-m-d') ?>" placeholder="Username">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="Username" class="col-sm-2 col-form-label">Lama Cuti</label>
+                                <div class="col-sm-3">
+                                    <input type="text" readonly class="form-control placeholder_color tiga" id="username" placeholder="Lama Cuti" name="username">
+                                    <?= form_error('username', '<small class="text-danger">', '</small>'); ?>
                                 </div>
                             </div>
 

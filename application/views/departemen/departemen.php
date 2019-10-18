@@ -9,10 +9,10 @@
                     <!-- Card Header - Dropdown -->
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                         <div class="text-left">
-                            <h5 class="m-0 font-weight-bold text-secondary text-right empat"><i class="fas fa-users"></i> Master Pegawai</h5>
+                            <h5 class="m-0 font-weight-bold text-secondary text-right empat"><i class="fas fa-landmark"></i> Master Departemen</h5>
                         </div>
                         <div class="text-right">
-                            <a href="<?= site_url('administrator/pegawai/tambah_pegawai'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm"><i class="fas fa-user-plus fa-sm text-white"></i> Tambah Data</a>
+                            <a href="<?= site_url('administrator/departemen/tambah'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm"><i class="fas fa-plus fa-sm text-white"></i> Tambah Data</a>
                         </div>
                     </div>
                     <!-- Card Body -->
@@ -25,10 +25,8 @@
                                 <thead class="tiga text-center table-dark">
                                     <tr>
                                         <th scope="col">No.</th>
-                                        <th scope="col">NIP</th>
-                                        <th scope="col">Nama Lengkap</th>
-                                        <th scope="col">Jabatan</th>
-                                        <th scope="col">Penempatan</th>
+                                        <th scope="col">Departemen</th>
+                                        <th scope="col">Nama Pejabat</th>
                                         <th scope="col">Action</th>
                                     </tr>
                                 </thead>
@@ -38,27 +36,29 @@
                                     foreach ($row->result() as $key => $data) { ?>
                                         <tr>
                                             <td class="align-middle"><?= $no++ ?></td>
-                                            <td class="align-middle"><?= $data->nip ?></td>
-                                            <td class="align-middle"><?= $data->nama_lengkap ?></td>
-                                            <td class="align-middle"><?= $data->jabatan ?></td>
-                                            <td class="align-middle"><?= $data->penempatan ?></td>
+                                            <td class="align-middle"><?= $data->departemen ?></td>
+                                            <td class="align-middle"><?= $data->nama_pejabat ?></td>
                                             <td class="text-center align-middle" width="160px">
-                                                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModalLong" title="Detail data"><i class="fas fa-folder-open fa-sm text-white"></i></button>
-                                                <button type="button" class="btn btn-warning btn-sm" title="Edit data"><i class="fas fa-edit fa-sm text-white"></i></button>
-                                                <button type="button" class="btn btn-danger btn-sm" title="Hapus data"><i class="fas fa-trash-alt fa-sm text-white"></i></button>
+                                                <form action="<?= site_url('administrator/departemen/delete') ?>" method="post">
+                                                    <a href="<?= site_url('administrator/departemen/tambah' . $data->departemen) ?>" class="btn btn-warning btn-sm" title="Edit data"><i class="fas fa-edit fa-sm text-white"></i></a>
+
+                                                    <input type="hidden" name="departemen_name" value="<?= $data->departemen ?>">
+                                                    <button onclick="return confirm('Apakah anda yakin menghapus data?')" class="btn btn-danger btn-sm" title="Hapus data">
+                                                        <i class="fas fa-trash-alt fa-sm text-white"></i></button>
+                                                </form>
                                             </td>
                                         </tr>
                                     <?php
                                     } ?>
-
                                 </tbody>
                             </table>
                         </div>
-
                     </div>
+
                 </div>
             </div>
         </div>
+
     </div>
 
     </div>

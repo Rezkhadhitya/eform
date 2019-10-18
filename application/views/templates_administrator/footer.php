@@ -37,10 +37,8 @@
 <script src="<?= base_url('assets/'); ?>js/demo/chart-pie-demo.js"></script>
 
 <script type="text/javascript" src="<?= base_url('assets/'); ?>vendor/bootstrap-v2/jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
-<script type="text/javascript" src="<?= base_url('assets/'); ?>vendor/bootstrap-v2/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="<?= base_url('assets/'); ?>vendor/bootstrap-v2/bootstrap/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
 
-<script type="text/javascript" src="<?= base_url('assets/'); ?>>vendor/datatable-serverside/jquery-3.3.1.js" charset="UTF-8"></script>
+<script type="text/javascript" src="<?= base_url('assets/'); ?>vendor/datatable-serverside/jquery-3.3.1.js" charset="UTF-8"></script>
 <script type="text/javascript" src="<?= base_url('assets/'); ?>vendor/datatable-serverside/dataTables.min.js"></script>
 
 <script type="text/javascript">

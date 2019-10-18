@@ -65,8 +65,9 @@
                                     <span class="field">
                                         <select name="level" class="form-control tiga">
                                             <option value="">- Pilih -</option>
-                                            <option value="Menikah">admin</option>
-                                            <option value="Belum Menikah">user</option>
+                                            <option value="1">Admin</option>
+                                            <option value="2">User</option>
+                                            <option value="3">Pimpinan</option>
                                         </select>
                                     </span>
                                     <?= form_error('level', '<small class="text-danger">', '</small>'); ?>

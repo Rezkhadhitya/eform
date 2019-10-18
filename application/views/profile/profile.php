@@ -25,10 +25,8 @@
                                             <img src="<?= base_url('assets/img/profile/') . $user['image']; ?>" class="img-thumbnail rounded-circle col-md-7">
                                         </div>
                                         <div class="form-group row text-left">
-                                            <a class="col-sm-12 col-form-label mb-n1"><i class="fas fa-user fa-fw "></i> <?= $user['nama_lengkap']; ?></a>
-                                            <a class="col-sm-12 col-form-label mb-n1"><i class="fas fa-envelope fa-fw"></i> <?= $user['email']; ?></a>
-                                            <a class="col-sm-12 col-form-label mb-n1"><i class="fas fa-phone fa-fw"></i> +62 821 7719 4495</a>
-                                            <a class="col-sm-12 col-form-label mb-n4"><i class="fas fa-map-marker-alt fa-fw"></i> Jagakarsa, Jakarta Selatan</a>
+                                            <a class="col-sm-12 col-form-label mb-n1 mt-1"><i class="fas fa-user fa-fw "></i> <?= $user['nama_lengkap']; ?></a>
+                                            <a class="col-sm-12 col-form-label mb-n4"><i class="fas fa-envelope fa-fw"></i> <?= $user['email']; ?></a>
                                         </div>
                                     </div>
                                 </div>
@@ -105,21 +103,21 @@
                         <!-- Page Heading -->
                         <h1 class="h3 mb-4 text-gray-800"></h1>
                         <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                            <strong>Menunggu!</strong> Proses di teliti oleh dewan pimpinan.
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
 
                         <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                            <strong>Disetujui!</strong> oleh dewan pimpinan.
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
 
                         <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                            <strong>Ditolak!</strong> Karena ada proses pekerjaan yang belum selesai.
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -130,6 +128,7 @@
                 <!-- End of Main Content -->
             </div>
         </div>
+    </div>
 
     </div>
     <!-- End of Main Content -->

@@ -49,8 +49,9 @@
                 <div class="bg-white py-2 collapse-inner rounded">
                     <a class="collapse-item" href="<?= site_url('administrator/user'); ?>"><i class="fas fa-fw fa-caret-right"></i>Master User</a>
                     <a class="collapse-item" href="<?= site_url('administrator/pegawai'); ?>"><i class="fas fa-fw fa-caret-right"></i>Master Pegawai</a>
+                    <a class="collapse-item" href="<?= site_url('administrator/departemen'); ?>"><i class="fas fa-fw fa-caret-right"></i>Master Departemen</a>
                     <a class="collapse-item" href="<?= site_url('administrator/barang'); ?>"><i class="fas fa-fw fa-caret-right"></i>Master Barang</a>
-                    <a class="collapse-item" href="#"><i class="fas fa-fw fa-caret-right"></i>Konf. Perusahaan</a>
+                    <a class="collapse-item" href="<?= site_url('administrator/perusahaan'); ?>""><i class=" fas fa-fw fa-caret-right"></i>Konf. Perusahaan</a>
                 </div>
             </div>
         </li>
@@ -63,64 +64,23 @@
             PEGAWAI
         </div>
 
-        <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed mb-n3" href="#" data-toggle="collapse" data-target="#collapseCuti" aria-expanded="true" aria-controls="collapseCuti">
+            <a class="nav-link mb-n3" href="<?= site_url('administrator/cuti') ?>">
                 <i class="fas fa-fw fa-users"></i>
-                <span>Cuti Pegawai</span>
-            </a>
-
-            <div id="collapseCuti" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="<?= site_url('administrator/cuti'); ?>"><i class="fas fa-fw fa-caret-right"></i>Tabel Data</a>
-                    <a class="collapse-item" href="register.html"><i class="fas fa-fw fa-caret-right"></i>Input Data</a>
-
-                </div>
-            </div>
+                <span>Pengajuan Cuti</span></a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link collapsed mb-n3" href="#" data-toggle="collapse" data-target="#collapsePermintaan" aria-expanded="true" aria-controls="collapsePermintaan">
-                <i class="fas fa-fw fa-sticky-note"></i>
-                <span>Permintaan Barang</span>
-            </a>
-
-            <div id="collapsePermintaan" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="<?= site_url('administrator/barang'); ?>""><i class=" fas fa-fw fa-caret-right"></i>Tabel Data</a>
-                    <a class="collapse-item" href="register.html"><i class="fas fa-fw fa-caret-right"></i>Input Data</a>
-                </div>
-            </div>
+            <a class="nav-link mb-n3" href="<?= site_url('administrator/barang') ?>">
+                <i class="fas fa-fw fa-file"></i>
+                <span>Permintaan Barang</span></a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link collapsed mb-n3" href="#" data-toggle="collapse" data-target="#collapsePenerimaan" aria-expanded="true" aria-controls="collapsePenerimaan">
-                <i class="fas fa-fw fa-sticky-note"></i>
-                <span>Penerimaan Barang</span>
-            </a>
-
-            <div id="collapsePenerimaan" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="login.html"><i class="fas fa-fw fa-caret-right"></i>Tabel Data</a>
-                    <a class="collapse-item" href="register.html"><i class="fas fa-fw fa-caret-right"></i>Input Data</a>
-                </div>
-            </div>
+            <a class="nav-link mb-n3" href="<?= site_url('administrator/dashboard') ?>">
+                <i class="fas fa-fw fa-file"></i>
+                <span>Penerimaan Barang</span></a>
         </li>
-
-        <!-- <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseInvoice" aria-expanded="true" aria-controls="collapseInvoice">
-                <i class="fas fa-fw fa-sticky-note"></i>
-                <span>Rekap Data</span>
-            </a>
-
-            <div id="collapseInvoice" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="<?= site_url('administrator/invoice'); ?>"><i class="fas fa-fw fa-caret-right"></i> Data Barcoding</a>
-                    <a class="collapse-item" href="<?= site_url('administrator/invoice/mybiro'); ?>"><i class="fas fa-fw fa-caret-right"></i> Data Mybiro</a>
-                    <a class="collapse-item" href="<?= site_url('administrator/invoice/msb'); ?>"><i class="fas fa-fw fa-caret-right"></i> Data MSB</a>
-                </div>
-            </div>
-        </li> -->
 
         <!-- Divider -->
         <hr class="sidebar-divider mt-3">
@@ -129,12 +89,6 @@
         <div class="sidebar-heading">
             PIMPINAN
         </div>
-
-        <li class="nav-item">
-            <a class="nav-link mb-n3" href="<?= site_url('administrator/profile') ?>">
-                <i class="fas fa-fw fa-landmark"></i>
-                <span>Setup Departemen</span></a>
-        </li>
 
         <li class="nav-item">
             <a class="nav-link mb-n3" href="<?= site_url('administrator/profile') ?>">
