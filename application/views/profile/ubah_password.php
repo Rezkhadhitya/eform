@@ -30,7 +30,7 @@
                                         <div class="form-group row">
                                             <label for="nama_lengkap" class="col-sm-3 col-form-label">Password saat ini</label>
                                             <div class="col-sm-7">
-                                                <input type="text" class="form-control placeholder_color tiga " id="nama_lengkap" placeholder="Password saat ini" name="nama_lengkap" value="<?= set_value('nama_lengkap'); ?>">
+                                                <input type="password" class="form-control placeholder_color tiga " id="nama_lengkap" placeholder="Password saat ini" name="nama_lengkap" value="<?= set_value('nama_lengkap'); ?>">
                                                 <?= form_error('nama_lengkap', '<small class="text-danger">', '</small>'); ?>
                                             </div>
                                         </div>
@@ -38,7 +38,7 @@
                                         <div class="form-group row">
                                             <label for="Username" class="col-sm-3 col-form-label">Password baru</label>
                                             <div class="col-sm-7">
-                                                <input type="text" class="form-control placeholder_color tiga" id="username" placeholder="Password baru" name="username" value="<?= set_value('username'); ?>">
+                                                <input type="password" class="form-control placeholder_color tiga" id="username" placeholder="Password baru" name="username" value="<?= set_value('username'); ?>">
                                                 <?= form_error('username', '<small class="text-danger">', '</small>'); ?>
                                             </div>
                                         </div>
@@ -54,7 +54,7 @@
                                         <div class="form-group row">
                                             <label for="User" class="col-sm-3 col-form-label"></label>
                                             <div class="col-sm-5">
-                                                <button type="submit" class="btn btn-info btn-sm tiga"><i class="fas fa-paper-plane fa-sm text-white"></i> Simpan Data</button>
+                                                <button type="submit" class="btn btn-primary btn-sm tiga"><i class="fas fa-save fa-sm text-white"></i> Simpan Perubahan</button>
                                             </div>
                                         </div>
 

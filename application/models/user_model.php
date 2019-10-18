@@ -22,7 +22,6 @@ class User_model extends CI_Model
         $this->db->join('mst_module m', 'm.id=ma.id_module');
         $this->db->where('ma.id_mst_role', $id_role);
         $res['arr_menu'] = $this->db->get()->result_array();
-
         return $res;
     }
 }

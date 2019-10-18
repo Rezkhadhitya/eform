@@ -19,6 +19,9 @@
                     <!-- Begin Page Content -->
                     <div class="container-fluid">
 
+                        <!-- <form action=""> -->
+                        <?= form_open_multipart('profile/edit_profile'); ?>
+
                         <!-- Page Heading -->
                         <h1 class="h3 mb-4 text-gray-800"></h1>
 
@@ -28,7 +31,7 @@
                                 <div class="card mb-4 rounded-0">
                                     <div class="card-body tiga">
                                         <div class="">
-                                            <img src="<?= base_url('assets/img/profile/') . $user['image']; ?>" class="img-thumbnail rounded-circle">
+                                            <img src="<?= base_url('assets/img/profile/') . $user['image']; ?>" class="img-thumbnail rounded-circle" style="background-color:lightgrey;">
                                         </div>
 
                                         <br>
@@ -47,7 +50,7 @@
                                         <div class="form-group row">
                                             <label for="Username" class="col-sm-3 col-form-label">Username</label>
                                             <div class="col-sm-7">
-                                                <input type="text" readonly class="form-control placeholder_color tiga" id="username" placeholder="Username" name="username" value="<?= set_value('username'); ?>">
+                                                <input type="text" readonly class="form-control placeholder_color tiga" id="username" placeholder="Username" name="username" value="<?= $user['username']; ?>">
                                                 <?= form_error('username', '<small class="text-danger">', '</small>'); ?>
                                             </div>
                                         </div>
@@ -55,31 +58,15 @@
                                         <div class="form-group row">
                                             <label for="Password" class="col-sm-3 col-form-label">Nama Lengkap</label>
                                             <div class="col-sm-7">
-                                                <input type="password" class="form-control placeholder_color tiga" id="password" placeholder="Nama Lengkap" name="password" value="<?= set_value('password'); ?>">
+                                                <input type="text" class="form-control placeholder_color tiga" id="nama_lengkap" placeholder="Nama Lengkap" name="nama_lengkap" value="<?= $user['nama_lengkap']; ?>">
                                                 <?= form_error('password', '<small class="text-danger">', '</small>'); ?>
                                             </div>
                                         </div>
 
                                         <div class="form-group row">
-                                            <label for="Email" class="col-sm-3 col-form-label">Email</label>
+                                            <label for="Email" class="col-sm-3 col-form-label">Alamat Email</label>
                                             <div class="col-sm-7">
-                                                <input type="text" class="form-control placeholder_color tiga" id="email" placeholder="Alamat Email" name="email" value="<?= set_value('email'); ?>">
-                                                <?= form_error('email', '<small class="text-danger">', '</small>'); ?>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group row">
-                                            <label for="alamat_tinggal" class="col-sm-3 col-form-label">Alamat Rumah</label>
-                                            <div class="col-sm-7">
-                                                <textarea class="form-control placeholder_color tiga" rows="3" id="alamat" name="alamat" placeholder="Alamat Tinggal"></textarea>
-                                                <?= form_error('alamat', '<small class="text-danger">', '</small>'); ?>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group row">
-                                            <label for="Email" class="col-sm-3 col-form-label">Telepon</label>
-                                            <div class="col-sm-7">
-                                                <input type="text" class="form-control placeholder_color tiga" id="email" placeholder="Telepon" name="email" value="<?= set_value('email'); ?>">
+                                                <input type="text" class="form-control placeholder_color tiga" id="email" placeholder="Alamat Email" name="email" value="<?= $user['email']; ?>">
                                                 <?= form_error('email', '<small class="text-danger">', '</small>'); ?>
                                             </div>
                                         </div>
@@ -87,7 +74,7 @@
                                         <div class="form-group row">
                                             <label for="User" class="col-sm-3 col-form-label"></label>
                                             <div class="col-sm-5">
-                                                <button type="submit" class="btn btn-primary btn-sm tiga"><i class="fas fa-paper-plane fa-sm text-white"></i> Simpan Data</button>
+                                                <button type="submit" class="btn btn-primary btn-sm tiga"><i class="fas fa-paper-plane fa-sm text-white"></i> Update Profile</button>
                                             </div>
                                         </div>
 

@@ -9,7 +9,7 @@
                     <!-- Card Header - Dropdown -->
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                         <div class="text-left">
-                            <h5 class="m-0 font-weight-bold text-secondary text-right"><i class="fas fa-fw fa-user-plus"></i> Tambah User</h5>
+                            <h5 class="m-0 font-weight-bold text-secondary text-right empat"><i class="fas fa-fw fa-user-plus"></i> Tambah User</h5>
                         </div>
                         <div class="text-right">
                             <a href="<?= base_url('administrator/user'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm"><i class="fas fa-undo-alt fa-sm text-white"></i> Kembali</a>
@@ -65,8 +65,9 @@
                                     <span class="field">
                                         <select name="level" class="form-control tiga">
                                             <option value="">- Pilih -</option>
-                                            <option value="Menikah">admin</option>
-                                            <option value="Belum Menikah">user</option>
+                                            <option value="1">Admin</option>
+                                            <option value="2">User</option>
+                                            <option value="3">Pimpinan</option>
                                         </select>
                                     </span>
                                     <?= form_error('level', '<small class="text-danger">', '</small>'); ?>

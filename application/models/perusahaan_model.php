@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Pegawai_model extends CI_Model
+class Perusahaan_model extends CI_Model
 {
 
     function __construct()
@@ -11,9 +11,9 @@ class Pegawai_model extends CI_Model
         $this->load->model('User_model', 'um');
     }
 
-    public function get($id = null)
+    public function get()
     {
-        $this->db->from('mst_pegawai');
+        $this->db->from('mst_perusahaan');
         $query = $this->db->get();
         return $query;
     }

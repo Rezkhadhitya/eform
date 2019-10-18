@@ -33,6 +33,10 @@
             font-size: 14px;
         }
 
+        .empat {
+            font-size: 17px;
+        }
+
         .placeholder_color::-webkit-input-placeholder {
             color: #D4D5DB;
         }

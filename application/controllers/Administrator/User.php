@@ -8,6 +8,7 @@ class User extends CI_Controller
     {
         parent::__construct();
         $this->load->model('User_model', 'um');
+        $this->load->model('User_model');
     }
 
     public function index()
@@ -51,6 +52,28 @@ class User extends CI_Controller
             $this->load->view('templates_administrator/sidebar', $res);
             $this->load->view('user/tambah_user', $data);
             $this->load->view('templates_administrator/footer');
-        } else { }
+        } else {
+            $data = [
+                'username' => htmlspecialchars($this->input->post('username', true)),
+                'password' => sha1($this->input->post('password'), true),
+                'nama_lengkap' => htmlspecialchars($this->input->post('nama_lengkap', true)),
+                'email' => htmlspecialchars($this->input->post('email', true)),
+                'image' => 'default.jpg',
+                'id_role' => 2,
+                'date_created' => time(),
+                'is_active' => 1
+            ];
+            $this->db->insert('user', $data);
+
+            if ($this->db->affected_rows() > 0) {
+                $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible fade show tiga" role="alert">
+                    <strong>Berhasil!</strong> menambahkan data user.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>');
+                redirect('administrator/user');
+            }
+        }
     }
 }

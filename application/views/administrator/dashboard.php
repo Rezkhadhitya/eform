@@ -9,7 +9,7 @@
                     <!-- Card Header - Dropdown -->
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                         <div class="text-left">
-                            <h5 class="m-0 font-weight-bold text-secondary text-right"><i class="fas fa-tachometer-alt"></i> Dashboard</h5>
+                            <h5 class="m-0 font-weight-bold text-secondary text-right empat"><i class="fas fa-tachometer-alt"></i> Dashboard</h5>
                         </div>
                     </div>
 

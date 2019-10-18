@@ -24,5 +24,3 @@ class LoginController extends CI_Controller {
 
 
 }
-
-?>
