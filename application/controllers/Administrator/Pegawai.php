@@ -95,4 +95,20 @@ class Pegawai extends CI_Controller
             redirect('administrator/pegawai');
         }
     }
+
+    public function get_detail()
+    {
+        $post = $this->input->post();
+
+        $this->db->where('nip', $post['id']);
+        $data = $this->db->get('mst_pegawai');
+
+        if ($data->num_rows() > 0) {
+            $res = array('error' => false, "data" => $data->row_array());
+        } else {
+            $res = array('error' => true, 'message' => 'Data tidak ditemukan');
+        }
+
+        echo json_encode($res);
+    }
 }
