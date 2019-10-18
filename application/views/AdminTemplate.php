@@ -58,7 +58,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="<?= site_url('administrator/dashboard') ?>">
+            <a class="nav-link" href="<?= site_url('DashboardAdmin') ?>">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
