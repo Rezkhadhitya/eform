@@ -76,4 +76,20 @@ class User extends CI_Controller
             }
         }
     }
+
+
+    public function get_detail(){
+        $post = $this->input->post();
+        
+        $this->db->where('user_id', $post['id']);
+        $data = $this->db->get('user');
+
+        if($data->num_rows()>0){
+            $res = array('error' => false, "data" => $data->row_array());
+        }else{
+            $res = array('error' => true, 'message' => 'Data nya udah gk ada bosque');
+        }
+
+        echo json_encode($res);
+    }
 }

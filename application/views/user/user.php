@@ -1,5 +1,6 @@
 <body id="page-top">
     <!-- Begin Page Content -->
+    
     <div class="container-fluid">
         <!-- Content Row -->
         <div class="row">
@@ -36,6 +37,7 @@
 
                                 <tbody class="dua text-center">
                                     <?php $no = 1;
+                                    // print_r($row->result());
                                     foreach ($row->result() as $key => $data) { ?>
                                         <tr>
                                             <td class="align-middle"><?= $no++ ?></td>
@@ -45,7 +47,7 @@
                                             <td class="align-middle"><?= $data->image ?></td>
                                             <td class="align-middle"><?= $data->role  ?></td>
                                             <td class="text-center align-middle" width="160px">
-                                                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModalLong" title="Detail data"><i class="fas fa-folder-open fa-sm text-white"></i></button>
+                                                <button type="button" class="btn btn-primary btn-sm" onclick="lihat_detail(<?php echo $data->user_id; ?>)"  title="Detail data"><i class="fas fa-folder-open fa-sm text-white"></i></button>
                                                 <button type="button" class="btn btn-warning btn-sm" title="Edit data"><i class="fas fa-edit fa-sm text-white"></i></button>
                                                 <button type="button" class="btn btn-danger btn-sm" title="Hapus data"><i class="fas fa-trash-alt fa-sm text-white"></i></button>
                                             </td>
@@ -63,5 +65,81 @@
         </div>
     </div>
 
+                        <div class="modal fade" id="modalnya" tabindex="-1" role="dialog" aria-labelledby="modalnyaTitle" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="alert alert-primary text-center" role="alert">
+                                        <strong>Data Detail Pegawai</strong>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body tiga">
+
+                                        <div class="form-group row mb-1">
+                                            <label for="Username" class="col-sm-4 col-form-label">Username</label>
+                                            <label for="Username" class="col-sm-1 col-form-label text-center">:</label>
+                                            <label for="Username" id="labelusername" class="col-sm-7 col-form-label">&nbsp;</label>
+                                        </div>
+
+                                        <div class="form-group row mb-1">
+                                            <label for="Username" class="col-sm-4 col-form-label">Nama</label>
+                                            <label for="Username" class="col-sm-1 col-form-label text-center">:</label>
+                                            <label for="Username" id="labelnama" class="col-sm-7 col-form-label">&nbsp;</label>
+                                        </div>
+
+                                        <div class="form-group row mb-1">
+                                            <label for="Username" class="col-sm-4 col-form-label">Email</label>
+                                            <label for="Username" class="col-sm-1 col-form-label text-center">:</label>
+                                            <label for="Username" id="labelemail" class="col-sm-7 col-form-label">&nbsp;</label>
+                                        </div>
+
+
+                                    
+                                    </div>
+                                    <div class="modal-footer tiga">
+                                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
     </div>
+
+
+    <script>
+        $(document).ready(function(){
+
+           
+        });
+
+        function lihat_detail(id){
+                    $.ajax({
+                        url : '<?php echo site_url("administrator/user/get_detail") ?>',
+                        data : {id : id },
+                        type : 'post',
+                        dataType : 'json',
+                        success : function(obj){
+                            if(obj.error==false) {
+                                // console.log(obj);
+
+                                $('#labelusername').html(obj.data.username);
+                                $('#labelnama').html(obj.data.nama_lengkap);
+                                $('#labelemail').html(obj.data.email);
+
+
+                                $('#modalnya').modal('show'); 
+                                }
+                                else {
+                                    window.swal('Error', obj.message, 'error');
+                                }
+                            }
+                    });
+        
+
+            }
+
+        
+    </script>
     <!-- End of Main Content -->
