@@ -32,12 +32,8 @@
                             <hr>
 
                             <div class="text-center">
-                                <a class="small text-primary" href="<?= base_url('administrator/auth/registrasi'); ?>"> Daftar disini!</a>
-                            </div>
-
-                            <div class="text-center">
-                                <label class="small text-gray">Sudah punya akun,</label>
-                                <a class="small text-primary" href="<?= base_url('administrator/auth'); ?>"> Login disini!</a>
+                                <label class="small text-gray">Kembali ke</label>
+                                <a class="small text-primary" href="<?= site_url('auth'); ?>"> Login!</a>
                             </div>
                         </div>
                     </div>

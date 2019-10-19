@@ -26,7 +26,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link mb-n3" href="<?= site_url('administrator/dashboard') ?>">
+            <a class="nav-link mb-n3" href="<?= site_url('dashboard') ?>">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
@@ -47,11 +47,11 @@
             </a>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="<?= site_url('administrator/user'); ?>"><i class="fas fa-fw fa-caret-right"></i>Master User</a>
-                    <a class="collapse-item" href="<?= site_url('administrator/pegawai'); ?>"><i class="fas fa-fw fa-caret-right"></i>Master Pegawai</a>
-                    <a class="collapse-item" href="<?= site_url('administrator/departemen'); ?>"><i class="fas fa-fw fa-caret-right"></i>Master Departemen</a>
-                    <a class="collapse-item" href="<?= site_url('administrator/barang'); ?>"><i class="fas fa-fw fa-caret-right"></i>Master Barang</a>
-                    <a class="collapse-item" href="<?= site_url('administrator/perusahaan'); ?>""><i class=" fas fa-fw fa-caret-right"></i>Konf. Perusahaan</a>
+                    <a class="collapse-item" href="<?= site_url('user'); ?>"><i class="fas fa-fw fa-caret-right"></i>Master User</a>
+                    <a class="collapse-item" href="<?= site_url('pegawai'); ?>"><i class="fas fa-fw fa-caret-right"></i>Master Pegawai</a>
+                    <a class="collapse-item" href="<?= site_url('departemen'); ?>"><i class="fas fa-fw fa-caret-right"></i>Master Departemen</a>
+                    <a class="collapse-item" href="<?= site_url('barang'); ?>"><i class="fas fa-fw fa-caret-right"></i>Master Barang</a>
+                    <a class="collapse-item" href="<?= site_url('perusahaan'); ?>""><i class=" fas fa-fw fa-caret-right"></i>Konf. Perusahaan</a>
                 </div>
             </div>
         </li>
@@ -65,19 +65,19 @@
         </div>
 
         <li class="nav-item">
-            <a class="nav-link mb-n3" href="<?= site_url('administrator/cuti') ?>">
+            <a class="nav-link mb-n3" href="<?= site_url('cuti') ?>">
                 <i class="fas fa-fw fa-users"></i>
                 <span>Pengajuan Cuti</span></a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link mb-n3" href="<?= site_url('administrator/barang') ?>">
+            <a class="nav-link mb-n3" href="<?= site_url('barang') ?>">
                 <i class="fas fa-fw fa-file"></i>
                 <span>Permintaan Barang</span></a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link mb-n3" href="<?= site_url('administrator/dashboard') ?>">
+            <a class="nav-link mb-n3" href="<?= site_url('dashboard') ?>">
                 <i class="fas fa-fw fa-file"></i>
                 <span>Penerimaan Barang</span></a>
         </li>
@@ -91,25 +91,25 @@
         </div>
 
         <li class="nav-item">
-            <a class="nav-link mb-n3" href="<?= site_url('administrator/profile') ?>">
+            <a class="nav-link mb-n3" href="<?= site_url('profile') ?>">
                 <i class="fas fa-fw fa-users"></i>
                 <span>Data Pegawai</span></a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link mb-n3" href="<?= site_url('administrator/profile') ?>">
+            <a class="nav-link mb-n3" href="<?= site_url('profile') ?>">
                 <i class="fas fa-fw fa-file"></i>
                 <span>Approval Cuti</span></a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link mb-n3" href="<?= site_url('administrator/profile') ?>">
+            <a class="nav-link mb-n3" href="<?= site_url('profile') ?>">
                 <i class="fas fa-fw fa-file"></i>
                 <span>Approval Permintaan</span></a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link mb-n3" href="<?= site_url('administrator/profile') ?>">
+            <a class="nav-link mb-n3" href="<?= site_url('profile') ?>">
                 <i class="fas fa-fw fa-print"></i>
                 <span>Laporan</span></a>
         </li>
@@ -124,7 +124,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="<?= site_url('administrator/profile') ?>">
+            <a class="nav-link" href="<?= site_url('profile') ?>">
                 <i class="fas fa-fw fa-user"></i>
                 <span>Profile</span></a>
         </li>
@@ -216,7 +216,7 @@
                                 </span>
                                 <span class="text text-white">Cancel</span>
                             </a>
-                            <a href="<?= base_url('Administrator/Auth/logout') ?>" class="btn btn-danger btn-icon-split dua">
+                            <a href="<?= site_url('auth/logout') ?>" class="btn btn-danger btn-icon-split dua">
                                 <span class="icon text-white-50">
                                     <i class="fas fa-sign-out-alt"></i>
                                 </span>

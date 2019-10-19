@@ -12,7 +12,7 @@
                             <h5 class="m-0 font-weight-bold text-secondary text-right empat"><i class="fas fa-fw fa-landmark"></i> Tambah Departemen</h5>
                         </div>
                         <div class="text-right">
-                            <a href="<?= site_url('administrator/departemen'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm"><i class="fas fa-undo-alt fa-sm text-white"></i> Kembali</a>
+                            <a href="<?= site_url('departemen'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm"><i class="fas fa-undo-alt fa-sm text-white"></i> Kembali</a>
                         </div>
                     </div>
 

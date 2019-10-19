@@ -12,7 +12,7 @@
                             <h5 class="m-0 font-weight-bold text-secondary text-right"><i class="fas fa-user-circle"></i> Ubah profile</h5>
                         </div>
                         <div class="text-right">
-                            <a href="<?= base_url('administrator/profile'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm"><i class="fas fa-undo-alt fa-sm text-white"></i> Kembali</a>
+                            <a href="<?= site_url('profile'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm"><i class="fas fa-undo-alt fa-sm text-white"></i> Kembali</a>
                         </div>
                     </div>
 

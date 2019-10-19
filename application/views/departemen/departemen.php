@@ -12,7 +12,7 @@
                             <h5 class="m-0 font-weight-bold text-secondary text-right empat"><i class="fas fa-landmark"></i> Master Departemen</h5>
                         </div>
                         <div class="text-right">
-                            <a href="<?= site_url('administrator/departemen/tambah'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm"><i class="fas fa-plus fa-sm text-white"></i> Tambah Data</a>
+                            <a href="<?= site_url('departemen/tambah'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm"><i class="fas fa-plus fa-sm text-white"></i> Tambah Data</a>
                         </div>
                     </div>
                     <!-- Card Body -->
@@ -39,8 +39,8 @@
                                             <td class="align-middle"><?= $data->departemen ?></td>
                                             <td class="align-middle"><?= $data->nama_pejabat ?></td>
                                             <td class="text-center align-middle" width="160px">
-                                                <form action="<?= site_url('administrator/departemen/delete') ?>" method="post">
-                                                    <a href="<?= site_url('administrator/departemen/tambah' . $data->departemen) ?>" class="btn btn-warning btn-sm" title="Edit data"><i class="fas fa-edit fa-sm text-white"></i></a>
+                                                <form action="<?= site_url('departemen/delete') ?>" method="post">
+                                                    <a href="<?= site_url('departemen/tambah' . $data->departemen) ?>" class="btn btn-warning btn-sm" title="Edit data"><i class="fas fa-edit fa-sm text-white"></i></a>
 
                                                     <input type="hidden" name="departemen_name" value="<?= $data->departemen ?>">
                                                     <button onclick="return confirm('Apakah anda yakin menghapus data?')" class="btn btn-danger btn-sm" title="Hapus data">

@@ -12,7 +12,7 @@
                             <h5 class="m-0 font-weight-bold text-secondary text-right empat"><i class="fas fa-users"></i> Master Pegawai</h5>
                         </div>
                         <div class="text-right">
-                            <a href="<?= site_url('administrator/pegawai/tambah_pegawai'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm"><i class="fas fa-user-plus fa-sm text-white"></i> Tambah Data</a>
+                            <a href="<?= site_url('pegawai/tambah_pegawai'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm"><i class="fas fa-user-plus fa-sm text-white"></i> Tambah Data</a>
                         </div>
                     </div>
                     <!-- Card Body -->
@@ -50,7 +50,6 @@
                                         </tr>
                                     <?php
                                     } ?>
-
                                 </tbody>
                             </table>
                         </div>
@@ -73,79 +72,79 @@
                 <div class="modal-body tiga">
 
                     <div class="form-group row mb-1">
-                        <h4><strong> <label id="label_namalengkap" class="col-form-label">&nbsp;</label></strong></h4>
+                        <h5><strong><label id="lbl_nama_lengkap" class="col-sm-12 col-form-label">&nbsp;</label></strong></h5>
                     </div>
 
                     <div class="form-group row mb-1">
                         <label class="col-sm-4 col-form-label">NIP</label>
                         <label class="col-sm-1 col-form-label text-center">:</label>
-                        <label id="label_nip" class="col-sm-7 col-form-label">&nbsp;</label>
+                        <label id="lbl_nip" class="col-sm-7 col-form-label"></label>
                     </div>
 
                     <div class="form-group row mb-1">
                         <label class="col-sm-4 col-form-label">Jenis Kelamin</label>
                         <label class="col-sm-1 col-form-label text-center">:</label>
-                        <label id="lbl_jeniskelamin" class="col-sm-7 col-form-label">&nbsp;</label>
+                        <label id="lbl_jeniskelamin" class="col-sm-7 col-form-label"></label>
                     </div>
 
                     <div class="form-group row mb-1">
                         <label class="col-sm-4 col-form-label">Tempat Tanggal Lahir</label>
                         <label class="col-sm-1 col-form-label text-center">:</label>
-                        <label id="lbl_tempat_lahir" class="col-sm-7 col-form-label">&nbsp;</label>
+                        <label id="lbl_tempat_lahir" class="col-sm-7 col-form-label"></label>
                     </div>
 
                     <div class="form-group row mb-1">
                         <label class="col-sm-4 col-form-label">Status Perkawinan</label>
                         <label class="col-sm-1 col-form-label text-center">:</label>
-                        <label id="lbl_status_perkawinan" class="col-sm-7 col-form-label">&nbsp;</label>
+                        <label id="lbl_status_perkawinan" class="col-sm-7 col-form-label"></label>
                     </div>
 
                     <div class="form-group row mb-1">
                         <label class="col-sm-4 col-form-label">Jumlah Anak</label>
                         <label class="col-sm-1 col-form-label text-center">:</label>
-                        <label id="lbl_jumlah_anak" class="col-sm-7 col-form-label">&nbsp;</label>
+                        <label id="lbl_jumlah_anak" class="col-sm-7 col-form-label"></label>
                     </div>
 
                     <div class="form-group row mb-1">
                         <label class="col-sm-4 col-form-label">Agama</label>
                         <label class="col-sm-1 col-form-label text-center">:</label>
-                        <label id="lbl_agama" class="col-sm-7 col-form-label">&nbsp;</label>
+                        <label id="lbl_agama" class="col-sm-7 col-form-label"></label>
                     </div>
 
                     <div class="form-group row mb-1">
                         <label class="col-sm-4 col-form-label">Alamat</label>
                         <label class="col-sm-1 col-form-label text-center">:</label>
-                        <label id="lbl_alamat" class="col-sm-7 col-form-label">&nbsp;</label>
+                        <label id="lbl_alamat" class="col-sm-7 col-form-label"></label>
                     </div>
 
                     <div class="form-group row mb-1">
                         <label class="col-sm-4 col-form-label">No. Telepon</label>
                         <label class="col-sm-1 col-form-label text-center">:</label>
-                        <label id="lbl_no_telepon" class="col-sm-7 col-form-label">&nbsp;</label>
+                        <label id="lbl_no_telepon" class="col-sm-7 col-form-label"></label>
                     </div>
 
                     <div class="form-group row mb-1">
                         <label class="col-sm-4 col-form-label">Email</label>
                         <label class="col-sm-1 col-form-label text-center">:</label>
-                        <label id="lbl_email" class="col-sm-7 col-form-label">&nbsp;</label>
+                        <label id="lbl_email" class="col-sm-7 col-form-label"></label>
                     </div>
 
                     <div class="form-group row mb-1">
                         <label class="col-sm-4 col-form-label">Jabatan</label>
                         <label class="col-sm-1 col-form-label text-center">:</label>
-                        <label id="lbl_jabatan" class="col-sm-7 col-form-label">&nbsp;</label>
+                        <label id="lbl_jabatan" class="col-sm-7 col-form-label"></label>
                     </div>
 
                     <div class="form-group row mb-1">
                         <label class="col-sm-4 col-form-label">Penempatan</label>
                         <label class="col-sm-1 col-form-label text-center">:</label>
-                        <label id="lbl_penempatan" class="col-sm-7 col-form-label">&nbsp;</label>
+                        <label id="lbl_penempatan" class="col-sm-7 col-form-label"></label>
                     </div>
 
                     <div class="form-group row mb-1">
-                        <label class="col-sm-4 col-form-label">Tanggal Aktif Keja</label>
+                        <label class="col-sm-4 col-form-label">Tanggal Aktif Kerja</label>
                         <label class="col-sm-1 col-form-label text-center">:</label>
-                        <label id="lbl_tanggal_aktif_kerja" class="col-sm-7 col-form-label">&nbsp;</label>
+                        <label id="lbl_tanggal_aktif_kerja" class="col-sm-7 col-form-label"></label>
                     </div>
                 </div>
                 <div class="modal-footer tiga">
@@ -159,9 +158,7 @@
     <!-- End of Main Content -->
 
     <script>
-        $(document).ready(function() {
-
-        });
+        $(document).ready(function() {});
 
         function lihat_detail(id) {
             $.ajax({
@@ -173,7 +170,7 @@
                 dataType: 'json',
                 success: function(obj) {
                     if (obj.error == false) {
-                        $('#label_namalengkap').html(obj.data.nama_lengkap);
+                        $('#lbl_nama_lengkap').html(obj.data.nama_lengkap);
                         $('#lbl_nip').html(obj.data.nip);
                         $('#lbl_jeniskelamin').html(obj.data.jenis_kelamin);
                         $('#lbl_tempat_lahir').html(obj.data.tempat_lahir);

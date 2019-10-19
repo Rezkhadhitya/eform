@@ -12,7 +12,7 @@
                             <h5 class="m-0 font-weight-bold text-secondary text-right empat"><i class="fas fa-file"></i> Master Barang</h5>
                         </div>
                         <div class="text-right">
-                            <a href="<?= base_url('administrator/barang/tambah_barang'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm"><i class="fas fa-plus fa-sm text-white"></i> Tambah Data</a>
+                            <a href="<?= site_url('barang/tambah_barang'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm"><i class="fas fa-plus fa-sm text-white"></i> Tambah Data</a>
                         </div>
                     </div>
                     <!-- Card Body -->

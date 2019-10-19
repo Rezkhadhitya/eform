@@ -16,7 +16,6 @@ class User extends CI_Controller
         $data['title'] = 'Master User';
         $data['user'] = $this->session->userdata('login');
 
-        $this->load->model('user_model');
         $data['row'] = $this->user_model->get();
 
         $res = $this->um->get_role($this->session->userdata('role'));

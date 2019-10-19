@@ -11,7 +11,7 @@ class Pegawai_model extends CI_Model
         $this->load->model('User_model', 'um');
     }
 
-    public function get($id = null)
+    public function get()
     {
         $this->db->from('mst_pegawai');
         $query = $this->db->get();

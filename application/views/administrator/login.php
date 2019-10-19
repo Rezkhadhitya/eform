@@ -19,7 +19,7 @@
 
                             <?= $this->session->flashdata('pesan'); ?>
 
-                            <form method="post" action="<?= base_url('administrator/auth/proses_login') ?>" class="user">
+                            <form method="post" action="<?= site_url('auth/proses_login') ?>" class="user">
                                 <div class="form-group">
                                     <input type="text" class="form-control placeholder_color form-control-user" id="username" name="username" aria-describedby="emailHelp" placeholder="Masukkan Username anda" value="<?= set_value('username'); ?>">
                                     <?= form_error('username', '<small class="text-danger ml-3">', '</small>'); ?>
@@ -37,11 +37,11 @@
 
                             <div class="text-center">
                                 <label class="small text-gray mb-0">Belum punya akun,</label>
-                                <a class="small text-primary mb-0" href="<?= base_url('administrator/auth/registrasi'); ?>"> Daftar disini!</a>
+                                <a class="small text-primary mb-0" href="<?= site_url('auth/registrasi'); ?>"> Daftar disini!</a>
                             </div>
 
                             <div class="text-center">
-                                <a class="small mt-0" href="<?= base_url('administrator/auth/lupa_password'); ?>">Lupa password?</a>
+                                <a class="small mt-0" href="<?= site_url('auth/lupa_password'); ?>">Lupa password?</a>
                             </div>
                         </div>
                     </div>

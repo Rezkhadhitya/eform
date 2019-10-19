@@ -12,7 +12,7 @@
                             <h5 class="m-0 font-weight-bold text-secondary text-right empat"><i class="fas fa-users"></i> Master User</h5>
                         </div>
                         <div class="text-right">
-                            <a href="<?= base_url('administrator/user/tambah_user'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm"><i class="fas fa-user-plus fa-sm text-white"></i> Tambah Data</a>
+                            <a href="<?= site_url('user/tambah_user'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm"><i class="fas fa-user-plus fa-sm text-white"></i> Tambah Data</a>
                         </div>
                     </div>
                     <!-- Card Body -->
@@ -106,13 +106,11 @@
     <!-- End of Main Content -->
 
     <script>
-        $(document).ready(function() {
-
-        });
+        $(document).ready(function() {});
 
         function lihat_detail(id) {
             $.ajax({
-                url: '<?= site_url("administrator/user/get_detail") ?>',
+                url: '<?= site_url("user/get_detail") ?>',
                 data: {
                     id: id
                 },

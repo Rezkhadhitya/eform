@@ -8,6 +8,8 @@ class Cuti extends CI_Controller
     {
         parent::__construct();
         $this->load->model('User_model', 'um');
+        $this->load->model('departemen_model');
+        $this->load->model('cuti_model');
     }
 
     public function index()
@@ -17,7 +19,6 @@ class Cuti extends CI_Controller
 
         $res = $this->um->get_role($this->session->userdata('role'));
 
-        $this->load->model('cuti_model');
         $data['row'] = $this->cuti_model->get();
 
         $this->load->view('templates_administrator/header', $data);
@@ -30,11 +31,10 @@ class Cuti extends CI_Controller
     {
         $data['title'] = 'Tambah Cuti';
         $data['user'] = $this->session->userdata('login');
-
         $res = $this->um->get_role($this->session->userdata('role'));
-
-        $this->load->model('cuti_model');
         $data['row'] = $this->cuti_model->get();
+
+        $data['departemen'] = $this->departemen_model->get();
 
         $this->load->view('templates_administrator/header', $data);
         $this->load->view('templates_administrator/sidebar', $res);
@@ -42,19 +42,19 @@ class Cuti extends CI_Controller
         $this->load->view('templates_administrator/footer');
     }
 
-    public function riwayat_cuti()
+    public function get_detail()
     {
-        $data['title'] = 'Riwayat Cuti';
-        $data['user'] = $this->session->userdata('login');
+        $post = $this->input->post();
 
-        $res = $this->um->get_role($this->session->userdata('role'));
+        $this->db->where('nomor', $post['id']);
+        $data = $this->db->get('trn_cuti');
 
-        $this->load->model('cuti_model');
-        $data['row'] = $this->cuti_model->get();
+        if ($data->num_rows() > 0) {
+            $res = array('error' => false, "data" => $data->row_array());
+        } else {
+            $res = array('error' => true, 'message' => 'Data tidak ditemukan');
+        }
 
-        $this->load->view('templates_administrator/header', $data);
-        $this->load->view('templates_administrator/sidebar', $res);
-        $this->load->view('cuti/riwayat_cuti', $data);
-        $this->load->view('templates_administrator/footer');
+        echo json_encode($res);
     }
 }

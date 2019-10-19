@@ -128,11 +128,11 @@
                             </table>
 
                             <div class="">
-                                <a href="<?= base_url('administrator/barang'); ?>" class="btn btn-sm btn-secondary"><i class="fas fa-print fa-sm text-white"></i> Print Preview</a>
+                                <a href="<?= site_url('barang'); ?>" class="btn btn-sm btn-secondary"><i class="fas fa-print fa-sm text-white"></i> Print Preview</a>
 
-                                <a href="<?= base_url('administrator/barang'); ?>" class="btn btn-sm btn-info"><i class="fas fa-print fa-sm text-white"></i> Print data</a>
+                                <a href="<?= site_url('barang'); ?>" class="btn btn-sm btn-info"><i class="fas fa-print fa-sm text-white"></i> Print data</a>
 
-                                <a href="<?= base_url('administrator/barang'); ?>" class="btn btn-sm btn-success"><i class="fas fa-file-excel fa-sm text-white"></i> Export Excel</a>
+                                <a href="<?= site_url('barang'); ?>" class="btn btn-sm btn-success"><i class="fas fa-file-excel fa-sm text-white"></i> Export Excel</a>
                             </div>
 
                         </form>

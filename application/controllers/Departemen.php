@@ -17,7 +17,7 @@ class Departemen extends CI_Controller
         $data['title'] = 'Master Departemen';
         $data['user'] = $this->session->userdata('login');
 
-        $this->load->model('Departemen_model');
+        $this->load->model('departemen_model');
         $data['row'] = $this->Departemen_model->get();
 
         $res = $this->um->get_role($this->session->userdata('role'));
@@ -32,8 +32,8 @@ class Departemen extends CI_Controller
     {
         $data['title'] = 'Master Departemen';
         $data['user'] = $this->session->userdata('login');
+        $this->load->model('departemen_model');
 
-        $this->load->model('Departemen_model');
         $data['row'] = $this->Departemen_model->get();
 
         $res = $this->um->get_role($this->session->userdata('role'));
@@ -85,7 +85,7 @@ class Departemen extends CI_Controller
         $data['title'] = 'Master Departemen';
         $data['user'] = $this->session->userdata('login');
 
-        $this->load->model('Departemen_model');
+        $this->load->model('departemen_model');
         $data['row'] = $this->Departemen_model->get();
 
         $res = $this->um->get_role($this->session->userdata('role'));

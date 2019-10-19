@@ -41,7 +41,7 @@
                                                 <i class="fas fa-user-tie fa-5x text-gray-300 rotate"></i>
                                             </div>
                                             <label for="nama_lengkap" class="col-sm-12 col-form-label tiga">Edit informasi personal anda.</label>
-                                            <a href="<?= site_url('administrator/profile/konf_profile'); ?>" for="nama_lengkap" class="col-sm-12 col-form-label  mb-n4"> <strong>Informasi Data Diri<i class="fas fa-angle-right fa-fw"></i></strong></a>
+                                            <a href="<?= site_url('profile/konf_profile'); ?>" for="nama_lengkap" class="col-sm-12 col-form-label  mb-n4"> <strong>Informasi Data Diri<i class="fas fa-angle-right fa-fw"></i></strong></a>
                                         </div>
                                     </div>
                                 </div>
@@ -57,7 +57,7 @@
                                                 <i class="fas fa-user-edit fa-5x text-gray-300 rotate"></i>
                                             </div>
                                             <label for="nama_lengkap" class="col-sm-12 col-form-label tiga">Edit informasi keamanan anda.</label>
-                                            <a href="<?= site_url('administrator/profile/edit_profile'); ?>" for="nama_lengkap" class="col-sm-12 col-form-label  mb-n4"> <strong>Informasi Keamanan<i class="fas fa-angle-right fa-fw"></i></strong></a>
+                                            <a href="<?= site_url('profile/edit_profile'); ?>" for="nama_lengkap" class="col-sm-12 col-form-label  mb-n4"> <strong>Informasi Keamanan<i class="fas fa-angle-right fa-fw"></i></strong></a>
                                         </div>
                                     </div>
                                 </div>
@@ -72,7 +72,7 @@
                                                 <i class="fas fa-lock fa-5x text-gray-300 rotate"></i>
                                             </div>
                                             <label for="nama_lengkap" class="col-sm-12 col-form-label tiga">Edit kata sandi anda.</label>
-                                            <a href="<?= site_url('administrator/profile/ubah_password'); ?>" for="nama_lengkap" class="col-sm-12 col-form-label mb-n4"> <strong>Ubah Kata Sandi<i class="fas fa-angle-right fa-fw"></i></strong></a>
+                                            <a href="<?= site_url('profile/ubah_password'); ?>" for="nama_lengkap" class="col-sm-12 col-form-label mb-n4"> <strong>Ubah Kata Sandi<i class="fas fa-angle-right fa-fw"></i></strong></a>
                                         </div>
                                     </div>
                                 </div>

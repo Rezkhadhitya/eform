@@ -9,7 +9,6 @@ class Departemen_model extends CI_Model
     {
         parent::__construct();
         $this->load->model('User_model', 'um');
-        $this->load->model('departemen_model');
     }
 
     public function get()

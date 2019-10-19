@@ -12,7 +12,7 @@
                             <h5 class="m-0 font-weight-bold text-secondary text-right empat"><i class="fas fa-fw fa-user-plus"></i> Tambah Cuti</h5>
                         </div>
                         <div class="text-right">
-                            <a href="<?= base_url('administrator/cuti'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm"><i class="fas fa-undo-alt fa-sm text-white"></i> Kembali</a>
+                            <a href="<?= site_url('cuti'); ?>" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm"><i class="fas fa-undo-alt fa-sm text-white"></i> Kembali</a>
                         </div>
                     </div>
 
@@ -23,10 +23,11 @@
                                 <label for="jenis_kelamin" class="col-sm-2 col-form-label">Departemen</label>
                                 <div class="col-sm-6">
                                     <span class="field">
-                                        <select name="jenis_kelamin" class="form-control placeholder_color tiga" id="jenis_kelamin" name="jenis_kelamin">
+                                        <select name="departemen" class="form-control placeholder_color tiga" id="jenis_kelamin" name="jenis_kelamin">
                                             <option value="">- Pilih -</option>
-                                            <option value="Menikah">Laki - laki</option>
-                                            <option value="Belum Menikah">Perempuan</option>
+                                            <?php foreach ($departemen->result() as $key => $data) { ?>
+                                                <option value=""><?= $data->departemen ?></option>
+                                            <?php } ?>
                                         </select>
                                     </span>
                                     <?= form_error('jenis_kelamin', '<small class="text-danger">', '</small>'); ?>
