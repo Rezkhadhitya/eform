@@ -1,5 +1,5 @@
 <body class="bg-gradient-dark">
-    <div class="container">
+    <div class="container ">
 
         <div class="card o-hidden border-0 shadow-lg my-5">
             <div class="card-body p-0">
@@ -13,14 +13,14 @@
                     <div class="col-lg-6">
                         <div class="p-4 mr-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-2">Registrasi Akun Baru!</h1>
-                                <p class="mb-4 tiga">Untuk bisa memulai menggunakan aplikasi, silakan masukkan data anda, pada kolom yang tersedia, dan kami akan mengirimkan anda email notifikasi!</p>
+                                <h1 class="h4 text-gray-900 mb-2">Aktivasi Akun Baru!</h1>
+                                <p class="mb-4 tiga">Untuk bisa memulai menggunakan aplikasi, silakan masukkan NIP, pada kolom yang tersedia, dan kami akan mengirimkan anda email aktivasi anda!</p>
                             </div>
 
                             <form class="user" action="" method="post">
                                 <div class="form-group">
-                                    <input type="text" class="form-control placeholder_color form-control-user" id="nama_lengkap" name="nama_lengkap" placeholder="Nama Lengkap" value="<?= set_value('nama_lengkap'); ?>">
-                                    <?= form_error('nama_lengkap', '<small class="text-danger ml-3">', '</small>'); ?>
+                                    <input type="text" class="form-control placeholder_color form-control-user" id="NIP" name="NIP" placeholder="Nomor Induk Pegawai" value="<?= set_value('NIP'); ?>">
+                                    <?= form_error('NIP', '<small class="text-danger ml-3">', '</small>'); ?>
                                 </div>
 
                                 <div class="form-group">
@@ -55,7 +55,7 @@
                             </div>
 
                             <div class="text-center">
-                                <label class="small text-gray">Sudah punya akun? </label>
+                                <label class="small text-gray">Sudah aktivasi? </label>
                                 <a class="small text-primary" href="<?= site_url('auth'); ?>"> Login disini!</a>
                             </div>
                         </div>

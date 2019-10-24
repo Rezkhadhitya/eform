@@ -53,6 +53,7 @@
                                 </tbody>
                             </table>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -71,9 +72,13 @@
                 </div>
                 <div class="modal-body tiga">
 
-                    <div class="form-group row mb-1">
-                        <h5><strong><label id="lbl_nama_lengkap" class="col-sm-12 col-form-label">&nbsp;</label></strong></h5>
+                    <div class="form-group row">
+                        <div class="text-center">
+                            <img src=" <?= base_url('assets/img/profile/default.jpg') ?>" class="img-thumbnail mb-n2 rounded-0 col-4 text-center">
+                        </div>
                     </div>
+
+                    <h5 class="text-center"><strong><label id="lbl_nama_lengkap" class="col-form-label text-center">&nbsp;</label></strong></h5>
 
                     <div class="form-group row mb-1">
                         <label class="col-sm-4 col-form-label">NIP</label>
@@ -162,7 +167,7 @@
 
         function lihat_detail(id) {
             $.ajax({
-                url: '<?= site_url("administrator/pegawai/get_detail") ?>',
+                url: '<?= site_url("pegawai/get_detail") ?>',
                 data: {
                     id: id
                 },
@@ -182,9 +187,10 @@
                         $('#lbl_email').html(obj.data.email);
                         $('#lbl_jabatan').html(obj.data.jabatan);
                         $('#lbl_penempatan').html(obj.data.penempatan);
-                        $('#lbl_tanggal_aktif_kerja').html(obj.data.tanggal_aktif);
+                        $('#lbl_tanggal_aktif_kerja').html(obj.data.tanggal_aktif_kerja);
 
-                        $('#ModalPegawai').modal('show');
+                        window.swal('Error', obj.message, 'error');
+
                     } else {
                         window.swal('Error', obj.message, 'error');
                     }

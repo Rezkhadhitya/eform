@@ -65,9 +65,9 @@
                                     <span class="field">
                                         <select name="level" class="form-control tiga">
                                             <option value="">- Pilih -</option>
-                                            <option value="1">Admin</option>
-                                            <option value="2">User</option>
-                                            <option value="3">Pimpinan</option>
+                                            <?php foreach ($roles->result() as $key => $data) { ?>
+                                                <option value=""><?= $data->role ?></option>
+                                            <?php } ?>
                                         </select>
                                     </span>
                                     <?= form_error('level', '<small class="text-danger">', '</small>'); ?>
@@ -75,19 +75,16 @@
                             </div>
 
                             <div class="form-group row">
-                                <div class="col-sm-2">Gambar</div>
+                                <label class="col-sm-2 col-form-label">Status</label>
                                 <div class="col-sm-5">
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="image" name="image">
-                                        <label class="custom-file-label" for="image">Pilih Gambar</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="User" class="col-sm-2 col-form-label"></label>
-                                <div class="col-sm-2">
-                                    <img src="<?= base_url('assets/img/profile/') . $user['image']; ?>" class="img-thumbnail">
+                                    <span class="field">
+                                        <select name="status" class="form-control placeholder_color tiga" id="status" name="status ">
+                                            <option value="">- Pilih -</option>
+                                            <option value="0">Tidak Aktif</option>
+                                            <option value="1">Aktif</option>
+                                        </select>
+                                    </span>
+                                    <?= form_error('status', '<small class="text-danger">', '</small>'); ?>
                                 </div>
                             </div>
 

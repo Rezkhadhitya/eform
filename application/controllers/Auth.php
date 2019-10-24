@@ -43,7 +43,7 @@ class Auth extends CI_Controller
                 $this->session->set_flashdata('pesan', '<div class="alert alert-danger tiga" role="alert">
                 <strong>Username</strong> atau <strong>Password</strong> anda salah.
                 </div>');
-                redirect('administrator/auth');
+                redirect('auth');
             }
         }
     }
@@ -54,7 +54,7 @@ class Auth extends CI_Controller
         $this->session->set_flashdata('pesan', '<div class="alert alert-info tiga" role="alert">
         Anda berhasil <strong>Log Out</strong>.
         </div>');
-        redirect('administrator/auth');
+        redirect('auth');
         $this->session->sess_destroy();
     }
 
@@ -62,7 +62,7 @@ class Auth extends CI_Controller
     {
         $data['title'] = 'Registrasi akun baru';
 
-        $this->form_validation->set_rules('nama_lengkap', 'Nama Lengkap', 'trim|required');
+        $this->form_validation->set_rules('NIP', 'NIP', 'trim|required');
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
         $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[3]|is_unique[user.username]');
         $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[3]');

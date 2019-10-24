@@ -8,7 +8,7 @@ class User extends CI_Controller
     {
         parent::__construct();
         $this->load->model('User_model', 'um');
-        $this->load->model('User_model');
+        $this->load->model('user_model');
     }
 
     public function index()
@@ -16,7 +16,7 @@ class User extends CI_Controller
         $data['title'] = 'Master User';
         $data['user'] = $this->session->userdata('login');
 
-        $data['row'] = $this->user_model->get();
+        $data['rowa'] = $this->user_model->get();
 
         $res = $this->um->get_role($this->session->userdata('role'));
 
@@ -30,8 +30,9 @@ class User extends CI_Controller
     {
         $data['title'] = 'Tambah User';
         $data['user'] = $this->session->userdata('login');
-
         $res = $this->um->get_role($this->session->userdata('role'));
+
+        $data['roles'] = $this->user_model->level();
 
         $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[3]|is_unique[user.username]');
         $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[3]');
@@ -71,12 +72,44 @@ class User extends CI_Controller
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>');
-                redirect('administrator/user');
+                redirect('user');
             }
         }
     }
 
+    public function delete()
+    {
+        $nama =  $this->input->post('user_id');
+        $this->user_model->delete($nama);
+
+        if ($this->db->affected_rows() > 0) {
+            $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible fade show tiga" role="alert">
+                <strong>Berhasil!</strong> menghapus data departemen.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+                </div>');
+        }
+        echo "<Script>window.location='" . site_url('departemen') . "';</Script>";
+    }
+
     public function get_detail()
+    {
+        $post = $this->input->post();
+
+        $this->db->where('user_id', $post['id']);
+        $data = $this->db->get('user');
+
+        if ($data->num_rows() > 0) {
+            $res = array('error' => false, "data" => $data->row_array());
+        } else {
+            $res = array('error' => true, 'message' => 'Data tidak ditemukan');
+        }
+
+        echo json_encode($res);
+    }
+
+    public function get_edit()
     {
         $post = $this->input->post();
 

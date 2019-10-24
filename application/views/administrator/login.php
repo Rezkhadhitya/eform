@@ -1,20 +1,20 @@
 <body class="bg-gradient-dark">
-    <div class="container">
+    <div class="container col-lg-7">
 
         <div class="card o-hidden border-0 shadow-lg my-5">
             <div class="card-body p-0">
 
                 <!-- Nested Row within Card Body -->
                 <div class="row">
-                    <div class="col-lg-6 d-none d-lg-block">
+                    <div class="col-sm-7 d-lg-block">
                         <img src="<?= base_url('assets/img/welcome_screen.png'); ?>">
                     </div>
 
-                    <div class="col-lg-6">
-                        <div class="mt-5 p-4 mr-5">
+                    <div class="col-sm-5">
+                        <div class="mt-4 p-4 mr-5">
                             <div class="text-center">
                                 <h6 class="h4 text-gray-900 mb-2">Selamat Datang!</h6>
-                                <p class="mb-3 tiga">Silakan masukkan Username dan Password anda!</p>
+                                <p class="mb-3 tiga">Silakan masukkan Username / NIP dan Password anda!</p>
                             </div>
 
                             <?= $this->session->flashdata('pesan'); ?>
@@ -36,8 +36,8 @@
                             <hr>
 
                             <div class="text-center">
-                                <label class="small text-gray mb-0">Belum punya akun,</label>
-                                <a class="small text-primary mb-0" href="<?= site_url('auth/registrasi'); ?>"> Daftar disini!</a>
+                                <label class="small text-gray mb-0">Aktivasi akun,</label>
+                                <a class="small text-primary mb-0" href="<?= site_url('auth/registrasi'); ?>"> Klik disini!</a>
                             </div>
 
                             <div class="text-center">

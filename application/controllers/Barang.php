@@ -8,6 +8,7 @@ class Barang extends CI_Controller
     {
         parent::__construct();
         $this->load->model('User_model', 'um');
+        $this->load->model('barang_model');
     }
 
     public function index()
@@ -15,7 +16,6 @@ class Barang extends CI_Controller
         $data['title'] = 'Master Barang';
         $data['user'] = $this->session->userdata('login');
 
-        $this->load->model('barang_model');
         $data['row'] = $this->barang_model->get();
 
         $res = $this->um->get_role($this->session->userdata('role'));

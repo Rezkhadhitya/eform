@@ -10,6 +10,7 @@ class Login_model extends  CI_Model
         $this->db->join('mst_role rl', 'rl.id=u.id_role');
         $this->db->where("u.username", $username);
         $this->db->where("u.password", $password);
-        return $this->db->get();
+        $query = $this->db->get();
+        return $query;
     }
 }

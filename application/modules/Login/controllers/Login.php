@@ -51,7 +51,7 @@ class Login extends LoginController
       $password = $this->input->post('password');
 
       $user = $username;
-      $pass = MD5($password);
+      $pass = sha1($password);
 
       $cek = $this->fm->cek_login($user, $pass);
 

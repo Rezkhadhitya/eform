@@ -52,6 +52,7 @@
                     <a class="collapse-item" href="<?= site_url('departemen'); ?>"><i class="fas fa-fw fa-caret-right"></i>Master Departemen</a>
                     <a class="collapse-item" href="<?= site_url('barang'); ?>"><i class="fas fa-fw fa-caret-right"></i>Master Barang</a>
                     <a class="collapse-item" href="<?= site_url('perusahaan'); ?>""><i class=" fas fa-fw fa-caret-right"></i>Konf. Perusahaan</a>
+                    <a class="collapse-item" href="<?= site_url('admin/role'); ?>""><i class=" fas fa-fw fa-caret-right"></i>Role</a>
                 </div>
             </div>
         </li>

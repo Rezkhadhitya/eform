@@ -4,11 +4,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Pegawai extends CI_Controller
 {
-
     function __construct()
     {
         parent::__construct();
         $this->load->model('User_model', 'um');
+        $this->load->model('departemen_model');
     }
 
     public function index()
@@ -31,9 +31,11 @@ class Pegawai extends CI_Controller
     {
         $data['title'] = 'Tambah Pegawai';
         $data['user'] = $this->session->userdata('login');
-
         $res = $this->um->get_role($this->session->userdata('role'));
 
+        $data['departemen'] = $this->departemen_model->get();
+
+        $this->form_validation->set_rules('status', 'Status', 'trim|required');
         $this->form_validation->set_rules('nip', 'Username', 'trim|required');
         $this->form_validation->set_rules('no_ktp', 'No. KTP', 'trim|required');
         $this->form_validation->set_rules('nama_lengkap', 'Nama Lengkap', 'trim|required');
@@ -60,6 +62,8 @@ class Pegawai extends CI_Controller
         } else {
             $email = $this->input->post('email', true);
             $data = [
+                'is_active' => ($this->input->post('status', true)),
+                'tanggal_aktif_kerja' => ($this->input->post('tanggal_aktif_kerja', true)),
                 'nip' => ($this->input->post('nip', true)),
                 'no_ktp' => ($this->input->post('no_ktp', true)),
                 'nama_lengkap' => ($this->input->post('nama_lengkap', true)),
@@ -92,7 +96,7 @@ class Pegawai extends CI_Controller
 
             $this->session->set_flashdata('message', '<div class="tiga alert alert-success" role="alert">
             <strong>Berhasil!</strong> menambahkan data pegawai.</div>');
-            redirect('administrator/pegawai');
+            redirect('pegawai');
         }
     }
 

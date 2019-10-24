@@ -48,19 +48,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="#about">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+                <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                <a class="nav-link js-scroll-trigger" href="<?= site_url('auth'); ?>">Login</a>
             </li>
             </ul>
         </div>
@@ -71,147 +65,11 @@
     <header class="masthead">
         <div class="container">
         <div class="intro-text">
-            <div class="intro-lead-in">Selamat datang di PT. Tigapilar Maju Mandiri!</div>
-            <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
+            <div class="intro-lead-in">Selamat datang di e-Form!</div>
+            <div class="intro-heading text-uppercase">Aplikasi Pegawai</div>
         </div>
         </div>
     </header>
-
-    <!-- Services -->
-    <section class="page-section" id="services">
-        <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Our Services</h2>
-            <h3 class="section-subheading text-muted">Target Pasar kami adalah Polda, Polres dan Small Medium Enterprise (Usaha Kecil dan Menengah) yang belum IT Based Operational. Karena pangsa pasar ini sangat besar sekali, dan selama ini belum tergarap oleh perusahaan IT yang berskala besar. Belum tergarapnya pangsa pasar ini dikarenakan produk IT yang mahal, sehingga menyebabkan kebutuhan akan IT menjadi sesuatu yang mahal pula. Oleh Sebab itu Tigapilar melihat peluang ini dan menjawab semua kebutuhan IT. Fokus kami khususnya adalah Polda, Polres dan perusahaan yang berlokasi di wilayah luar jawa yang mana selama ini kurang mendapat perhatihan serius dari pihak-pihak terkait. Dengan demikian kami juga berusaha untuk membantu pemerintah dalam pemerataan teknologi dibidang Informasi dan Teknologi.</h3>
-            </div>
-        </div>
-        <div class="row text-center">
-            <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-                <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">E-Commerce</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-            </div>
-            <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-                <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">Responsive Design</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-            </div>
-            <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-                <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">Web Security</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Grid -->
-    <section class="bg-light page-section" id="portfolio">
-        <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Portfolio</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                    <i class="fas fa-plus fa-3x"></i>
-                </div>
-                </div>
-                <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-                <h4>Threads</h4>
-                <p class="text-muted">Illustration</p>
-            </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-                <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                    <i class="fas fa-plus fa-3x"></i>
-                </div>
-                </div>
-                <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-                <h4>Explore</h4>
-                <p class="text-muted">Graphic Design</p>
-            </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-                <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                    <i class="fas fa-plus fa-3x"></i>
-                </div>
-                </div>
-                <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-                <h4>Finish</h4>
-                <p class="text-muted">Identity</p>
-            </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-                <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                    <i class="fas fa-plus fa-3x"></i>
-                </div>
-                </div>
-                <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-                <h4>Lines</h4>
-                <p class="text-muted">Branding</p>
-            </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-                <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                    <i class="fas fa-plus fa-3x"></i>
-                </div>
-                </div>
-                <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-                <h4>Southwest</h4>
-                <p class="text-muted">Website Design</p>
-            </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-                <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                    <i class="fas fa-plus fa-3x"></i>
-                </div>
-                </div>
-                <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-                <h4>Window</h4>
-                <p class="text-muted">Photography</p>
-            </div>
-            </div>
-        </div>
-        </div>
-    </section>
 
     <!-- About -->
     <section class="page-section" id="about">
@@ -222,6 +80,7 @@
             <h3 class="section-subheading text-muted">PT Tigapilar Maju Mandiri atau lebih dikenal dengan nama Tigapilar telah dirintis sejak Bulan Juli 2011 dengan badan hukum (Perseroan Terbatas). Kami  bergerak dibidang Jasa Pembuatan Software (Desktop dan Web), Jasa Installasi Jaringan, Penyedia Tenaga Kerja (Human Development Services).</h3>
             </div>
         </div>
+        
         <div class="row">
             <div class="col-lg-12">
             <ul class="timeline">
@@ -292,125 +151,6 @@
                 </div>
                 </li>
             </ul>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <!-- Team -->
-    <section class="bg-light page-section" id="team">
-        <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4">
-            <div class="team-member">
-                <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
-                <h4>Kay Garland</h4>
-                <p class="text-muted">Lead Designer</p>
-                <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                    <a href="#">
-                    <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="#">
-                    <i class="fab fa-facebook-f"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="#">
-                    <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </li>
-                </ul>
-            </div>
-            </div>
-            <div class="col-sm-4">
-            <div class="team-member">
-                <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
-                <h4>Larry Parker</h4>
-                <p class="text-muted">Lead Marketer</p>
-                <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                    <a href="#">
-                    <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="#">
-                    <i class="fab fa-facebook-f"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="#">
-                    <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </li>
-                </ul>
-            </div>
-            </div>
-            <div class="col-sm-4">
-            <div class="team-member">
-                <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
-                <h4>Diana Pertersen</h4>
-                <p class="text-muted">Lead Developer</p>
-                <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                    <a href="#">
-                    <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="#">
-                    <i class="fab fa-facebook-f"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="#">
-                    <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </li>
-                </ul>
-            </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-8 mx-auto text-center">
-            <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <!-- Clients -->
-    <section class="py-5">
-        <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-sm-6">
-            <a href="#">
-                <img class="img-fluid d-block mx-auto" src="img/logos/envato.jpg" alt="">
-            </a>
-            </div>
-            <div class="col-md-3 col-sm-6">
-            <a href="#">
-                <img class="img-fluid d-block mx-auto" src="img/logos/designmodo.jpg" alt="">
-            </a>
-            </div>
-            <div class="col-md-3 col-sm-6">
-            <a href="#">
-                <img class="img-fluid d-block mx-auto" src="img/logos/themeforest.jpg" alt="">
-            </a>
-            </div>
-            <div class="col-md-3 col-sm-6">
-            <a href="#">
-                <img class="img-fluid d-block mx-auto" src="img/logos/creative-market.jpg" alt="">
-            </a>
             </div>
         </div>
         </div>

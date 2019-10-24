@@ -19,6 +19,33 @@
                     <!-- Card Body -->
                     <div class="card-body">
                         <form class="tiga" action="" method="post">
+
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Status</label>
+                                <div class="col-sm-5">
+                                    <span class="field">
+                                        <select name="status" class="form-control placeholder_color tiga" id="status" name="status ">
+                                            <option value="0">Tidak Aktif</option>
+                                            <option value="1">Aktif</option>
+                                        </select>
+                                    </span>
+                                    <?= form_error('status', '<small class="text-danger">', '</small>'); ?>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Tanggal Aktif Kerja</label>
+                                <div class="col-sm-5">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fas fa-calendar-alt fa-sm text-gray"></i></div>
+                                        </div>
+                                        <input type="date" class="form-control tiga" id="tanggal_lahir" name="tanggal_lahir" value="<?= date('Y-m-d') ?>" placeholder="DD/MM/YYYY">
+                                    </div>
+                                    <?= form_error('tanggal_lahir', '<small class="text-danger">', '</small>'); ?>
+                                </div>
+                            </div>
+
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">NIP</label>
                                 <div class="col-sm-5">
@@ -151,14 +178,13 @@
 
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Departemen</label>
-                                <div class="col-sm-4">
+                                <div class="col-sm-7">
                                     <span class="field">
                                         <select name="agama" id="agama" class="form-control placeholder_color tiga">
                                             <option value="">- Pilih -</option>
-                                            <option value="Keuangan">Keuangan</option>
-                                            <option value="Teknologi Informasi">Teknologi Informasi</option>
-                                            <option value="Administrasi">Administrasi</option>
-                                            <option value="Operasional">Operasional</option>
+                                            <?php foreach ($departemen->result() as $key => $data) { ?>
+                                                <option value=""><?= $data->departemen ?></option>
+                                            <?php } ?>
                                         </select>
                                     </span>
                                     <?= form_error('agama', '<small class="text-danger">', '</small>'); ?>
@@ -178,6 +204,23 @@
                                 <div class="col-sm-7">
                                     <input type="text" class="form-control placeholder_color tiga" id="penempatan" name="penempatan" placeholder="Lokasi Penempatan" value="<?= set_value('penempatan'); ?>">
                                     <?= form_error('penempatan', '<small class="text-danger">', '</small>'); ?>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-sm-2">Gambar</div>
+                                <div class="col-sm-5">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="image" name="image">
+                                        <label class="custom-file-label" for="image">Pilih Gambar</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="User" class="col-sm-2 col-form-label"></label>
+                                <div class="col-sm-2">
+                                    <img src="<?= base_url('assets/img/profile/') . $user['image']; ?>" class="img-thumbnail">
                                 </div>
                             </div>
 

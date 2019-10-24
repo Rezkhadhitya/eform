@@ -1,20 +1,20 @@
 <body class="bg-gradient-dark">
-    <div class="container">
+    <div class="container  col-lg-7">
 
         <div class="card o-hidden border-0 shadow-lg my-5">
             <div class="card-body p-0">
 
                 <!-- Nested Row within Card Body -->
                 <div class="row">
-                    <div class="col-lg-6 d-none d-lg-block">
+                    <div class="col-sm-7 d-lg-block">
                         <img src="<?= base_url('assets/img/welcome_screen.png'); ?>">
                     </div>
 
-                    <div class="col-lg-6">
+                    <div class="col-sm-5">
                         <div class="mt-4 p-4 mr-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-2">Lupa password anda?</h1>
-                                <p class="mb-4 tiga">Kami akan mengirimkan kode OTP ke alamat email anda, mohon untuk tidak memberitahukan kepada pihak lain!</p>
+                                <h6 class="h4 text-gray-900 mb-2">Lupa password anda?</h6>
+                                <p class="mb-3 tiga">Kami akan mengirimkan kode OTP ke alamat email anda, mohon untuk tidak memberitahukan kepada pihak lain!</p>
                             </div>
 
                             <?= $this->session->flashdata('pesan'); ?>

@@ -1,12 +1,13 @@
 <?php
 
 class LoginModel extends  CI_Model
-{   
-    function __construct(){
+{
+    function __construct()
+    {
         parent::__construct();
-      }
-    
-      function cek_login($username, $password)
+    }
+
+    function cek_login($username, $password)
     {
         $this->db->select('u.*, rl.role as nama_role')->from('user u');
         $this->db->join('mst_role rl', 'rl.id=u.id_role');
@@ -15,7 +16,3 @@ class LoginModel extends  CI_Model
         return $this->db->get();
     }
 }
-
-
-
-?>

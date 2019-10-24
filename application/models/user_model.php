@@ -4,6 +4,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class User_model extends CI_Model
 {
+
+    public function getAll()
+    {
+        $this->db->from('user');
+        $query = $this->db->get();
+        return $query;
+    }
+
     public function get($id = null)
     {
         $this->db->select('u.*, r.role as role')->from('user u');
@@ -23,5 +31,18 @@ class User_model extends CI_Model
         $this->db->where('ma.id_mst_role', $id_role);
         $res['arr_menu'] = $this->db->get()->result_array();
         return $res;
+    }
+
+    public function level()
+    {
+        $this->db->from('mst_role');
+        $query = $this->db->get();
+        return $query;
+    }
+
+    public function delete($nama)
+    {
+        $this->db->where('user_id', $nama);
+        $this->db->delete('user');
     }
 }
